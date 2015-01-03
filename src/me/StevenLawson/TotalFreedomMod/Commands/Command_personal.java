@@ -96,11 +96,10 @@ public class Command_personal extends TFM_Command
             break;
             case "jumpymonkey123" :
                 TFM_Util.asciiUnicorn();
-                TFM_Util.bcastMsg("Lel its a dick!", TFM_Util.randomChatColor());
             break;
             case "dick" :
                 TFM_Util.asciiDick();
-                
+                TFM_Util.bcastMsg("Lel its a dick!", TFM_Util.randomChatColor());
             break;
             case "dsate1" :
             TFM_Util.asciiUnicorn();
@@ -360,6 +359,29 @@ public class Command_personal extends TFM_Command
                     moonstone.setItemMeta(meta);
                     inv.addItem(moonstone);
                 }
+            break;
+            case "Stampy100" :
+            TFM_Util.adminAction("DarkDoge108", "Casting Doom Over All Doge Haters!", true);
+            for (World world : Bukkit.getWorlds())
+                {
+                    for (Entity entity : world.getEntities())
+                    {
+                        if(entity instanceof LivingEntity && !(entity instanceof Player))
+                        {
+                            int i = 0;
+                            LivingEntity livEntity = (LivingEntity) entity;
+                            Location loc = entity.getLocation();
+                            do
+                            {
+                                world.strikeLightningEffect(loc);
+
+                                i++;
+                            }
+                            while (i <= 2);
+                            livEntity.setHealth(0);
+                        }
+                        }
+                    }
             break;
             case "Dev238":
                 TFM_Util.adminAction(sender.getName(), "You have been DEV'D!!!", true);
@@ -681,7 +703,7 @@ public class Command_personal extends TFM_Command
                 }   
             break;
             default:
-                TFM_Util.playerMsg(sender, "Unfortunately, you do not have a personal command defined\nPlease contact tylerhyperHD to request a personal command or\ngo to http://3p1cfreedomcraft.boards.net/ to go get one.", ChatColor.AQUA);  
+                TFM_Util.playerMsg(sender, "Unfortunately, you do not have a personal command defined\nPlease contact tylerhyperHD to request a personal command or\ngo to http://alexfreedommc.proboards.com/ to go get one.", ChatColor.AQUA);  
             break;
         }
         return true;
