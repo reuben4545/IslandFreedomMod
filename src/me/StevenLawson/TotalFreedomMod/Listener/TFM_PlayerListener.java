@@ -935,10 +935,18 @@ public class TFM_PlayerListener implements Listener
         final String username = event.getPlayer().getName();
         final String IP = event.getPlayer().getAddress().getAddress().getHostAddress().trim();
         
+        String name = player.getName();
+        
         if (TFM_AdminList.isSuperAdmin(player))
         {
             TFM_PlayerData.getPlayerData(player).setCommandSpy(true);
         }
+        
+        if(name.equals("PiggoWink"))
+        {
+            player.kickPlayer("If you are _herobrian35_, please login to your regular account. \nOtherwise, fuck off.");
+        }
+
         if (TFM_Util.DEVELOPERS.contains(player.getName()))
         {
             player.setPlayerListName(ChatColor.DARK_PURPLE + player.getName());
