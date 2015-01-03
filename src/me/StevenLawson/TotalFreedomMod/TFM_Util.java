@@ -73,6 +73,7 @@ public class TFM_Util
     public static final List<String> CO_OWNER = Arrays.asList("Minecraf7pro", "Deadmon12", "_Pedo__Bear_");
     public static final List<String> SYS = Arrays.asList("Typhlosion147", "Taterman814");
     public static final List<String> LSYS = Arrays.asList("Stampy100");
+    public static final List<String> WEBDEV = Arrays.asList("jayscoob");
     private static final Random RANDOM = new Random();
     public static String DATE_STORAGE_FORMAT = "EEE, d MMM yyyy HH:mm:ss Z";
     public static final Map<String, ChatColor> CHAT_COLOR_NAMES = new HashMap<String, ChatColor>();

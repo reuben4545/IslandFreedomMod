@@ -1,6 +1,7 @@
 package me.StevenLawson.TotalFreedomMod.Commands;
 
 import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
+import me.StevenLawson.TotalFreedomMod.TFM_Util;
 import me.StevenLawson.TotalFreedomMod.TotalFreedomMod;
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
@@ -19,6 +20,7 @@ public class Command_relogger extends TFM_Command
     {
         for (Player p : Bukkit.getOnlinePlayers())
         {
+            TFM_Util.bcastMsg("All admins will be right back-they just have to relog after this reload.", ChatColor.RED);
             if (TFM_AdminList.isSuperAdmin(p))
             {
                 p.kickPlayer(ChatColor.RED + "Please relog into the server for admin changes to take effect.");

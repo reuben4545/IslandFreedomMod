@@ -2,6 +2,7 @@ package me.StevenLawson.TotalFreedomMod;
 
 import me.StevenLawson.TotalFreedomMod.Config.TFM_ConfigEntry;
 import static me.StevenLawson.TotalFreedomMod.TFM_Util.DEVELOPERS;
+import static me.StevenLawson.TotalFreedomMod.TFM_Util.WEBDEV;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -23,7 +24,7 @@ public enum TFM_PlayerRank
     SENIOR("a " + ChatColor.LIGHT_PURPLE + "Senior Admin", ChatColor.LIGHT_PURPLE + "[SrA]"),
     OWNER("the " + ChatColor.DARK_RED + "Owner", ChatColor.DARK_RED + "[Owner]"),
     CONSOLE("The " + ChatColor.DARK_PURPLE + "Console", ChatColor.DARK_PURPLE + "[Console]"),
-    WEB("the " + ChatColor.RED + "Web Developer + Sys Admin!", ChatColor.DARK_RED + "[Web-Dev]"),
+    WEBDEVS("a " + ChatColor.RED + "Web Developer", ChatColor.DARK_RED + "[Web-Dev]"),
     HELPER("a " + ChatColor.RED + "Helper", ChatColor.RED + "[Helper]"),
     MAN("the " + ChatColor.DARK_RED + "Admin Manager", ChatColor.DARK_RED + "[Admin Manage])"),
     SRA("a " + ChatColor.LIGHT_PURPLE + "Senior Helper", ChatColor.LIGHT_PURPLE + "[Senior-Helper]"),
@@ -145,11 +146,6 @@ public enum TFM_PlayerRank
             return Founder;
         }
         
-        if (sender.getName().equals("dbooj"))
-        {
-            return WEB;
-        }
-        
         if (sender.getName().equals("RobinGall2910"))
         {
             return CDEV;
@@ -165,6 +161,10 @@ public enum TFM_PlayerRank
             return DEVELOPER;
         }
 
+        if (WEBDEV.contains(sender.getName()))
+        {
+            return WEBDEVS;
+        }     
         final TFM_Admin entry = TFM_AdminList.getEntry((Player) sender);
 
         final TFM_PlayerRank rank;

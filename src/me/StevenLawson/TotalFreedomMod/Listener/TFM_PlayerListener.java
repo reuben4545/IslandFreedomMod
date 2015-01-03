@@ -944,6 +944,11 @@ public class TFM_PlayerListener implements Listener
             player.setPlayerListName(ChatColor.DARK_PURPLE + player.getName());
             TFM_PlayerData.getPlayerData(player).setTag("&8[&5Developer&8]");
         }
+        if (TFM_Util.WEBDEV.contains(player.getName()))
+        {
+            player.setPlayerListName(ChatColor.GOLD + player.getName());
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&9Web Dev&8]");
+        }
         if (TFM_Util.SYS.contains(player.getName()))
         {
             player.setPlayerListName(ChatColor.DARK_RED + player.getName());

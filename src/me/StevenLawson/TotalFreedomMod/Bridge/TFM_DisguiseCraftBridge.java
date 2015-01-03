@@ -1,5 +1,3 @@
-//Disguisecraft is gone now.
-/*
 package me.StevenLawson.TotalFreedomMod.Bridge;
 
 import me.StevenLawson.TotalFreedomMod.TFM_Log;
@@ -75,4 +73,3 @@ public class TFM_DisguiseCraftBridge
         return pluginEnabled;
     }
 }
-*/
