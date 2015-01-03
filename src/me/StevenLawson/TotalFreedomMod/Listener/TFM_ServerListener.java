@@ -47,6 +47,12 @@ public class TFM_ServerListener implements Listener
             event.setMotd(ChatColor.RED + "Server is currently in chaos mode, prepare for some crazy shit!");
             return;
         }
+        
+        if (TFM_ConfigEntry.DESTRUCTIVE_MODE.getBoolean())
+        {
+            event.setMotd(ChatColor.RED + "Server is currently in destructive mode, prepare for some crazy shit!");
+            return;
+        }
 
         if (!TFM_ConfigEntry.SERVER_COLORFUL_MOTD.getBoolean())
         {

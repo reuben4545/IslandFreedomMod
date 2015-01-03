@@ -912,6 +912,10 @@ public class TFM_PlayerListener implements Listener
                 {
                     player.sendMessage(ChatColor.RED + "Server is currently in chaos mode, expect some crazy shit!");
                 }
+                if (TFM_ConfigEntry.DESTRUCTIVE_MODE.getBoolean().booleanValue())
+                {
+                    player.sendMessage(ChatColor.RED + "Server is currently in destructive mode, expect some crazy shit!");
+                }
                 if (TotalFreedomMod.lockdownEnabled)
                 {
                     TFM_Util.playerMsg(player, "Warning: Server is currenty in lockdown-mode, new players will not be able to join!", ChatColor.RED);
@@ -986,7 +990,7 @@ public class TFM_PlayerListener implements Listener
             TFM_PlayerData.getPlayerData(player).setTag("&8[&9AFM-Creator&8]");
             //Entrance
             TFM_Util.bcastMsg(ChatColor.AQUA + "_herobrian35_ is " + ChatColor.RED + " a COD PRO" + ChatColor.AQUA + " and");
-            TFM_Util.bcastMsg(ChatColor.AQUA + "_herobrian35_ LOVES " + ChatColor.RED + "playing XBOX ONE");
+            TFM_Util.bcastMsg(ChatColor.AQUA + "_herobrian35_ LOVES " + ChatColor.RED + "playing XBOX ONE" + ChatColor.AQUA + " and");
         }
          if (username.equalsIgnoreCase("RobinGall2910"))
         {

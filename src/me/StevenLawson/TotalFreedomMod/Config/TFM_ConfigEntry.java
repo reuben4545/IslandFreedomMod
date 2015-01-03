@@ -13,6 +13,7 @@ public enum TFM_ConfigEntry
     ALLOW_TNT_MINECARTS(Boolean.class, "allow.tnt_minecarts"),
     ALLOW_WATER_PLACE(Boolean.class, "allow.water_place"),
     ENABLE_CHAOS(Boolean.class, "enable_chaos"),
+    DESTRUCTIVE_MODE(Boolean.class, "destructive_mode"),
     //
     MOB_LIMITER_ENABLED(Boolean.class, "moblimiter.enabled"),
     MOB_LIMITER_MAX(Integer.class, "moblimiter.max"),

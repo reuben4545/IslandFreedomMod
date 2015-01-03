@@ -10,12 +10,12 @@ import org.bukkit.entity.Player;
 public enum TFM_PlayerRank
 {
     EXECUTIVE("an " + ChatColor.BLUE + "Executive", ChatColor.BLUE + "[Executive]"),
-    CoOwner("the " + ChatColor.BLUE + "The Co Owner", ChatColor.BLUE + "[Co-Owner]"),
+    CoOwner("the " + ChatColor.BLUE + "Co-Owner", ChatColor.BLUE + "[Co-Owner]"),
     CDEV("the " + ChatColor.BLUE + "AlexFreedomMod Creator!", ChatColor.BLUE + "[AFM-Creator]"),
     SECURITY("the chief of " + ChatColor.RED + "Security", ChatColor.DARK_RED+ "[Chief of Security]"),
     SYS("a " + ChatColor.DARK_RED + "System Admin", ChatColor.DARK_RED + "[Sys-Admin]"),
     DEVELOPER("a " + ChatColor.DARK_PURPLE + "Developer", ChatColor.DARK_PURPLE + "[Dev]"),
-    Founder("a " + ChatColor.DARK_RED + "The Founder", ChatColor.DARK_RED + "[Founder]"),
+    Founder("the " + ChatColor.DARK_RED + "Founder", ChatColor.DARK_RED + "[Founder]"),
     IMPOSTOR("an " + ChatColor.YELLOW + ChatColor.UNDERLINE + "Impostor", ChatColor.YELLOW.toString() + ChatColor.UNDERLINE + "[IMP]"),
     NON_OP("a " + ChatColor.GREEN + "Non-OP", ChatColor.GREEN.toString()),
     OP("an " + ChatColor.RED + "OP", ChatColor.RED + "[OP]"),
@@ -26,7 +26,7 @@ public enum TFM_PlayerRank
     CONSOLE("The " + ChatColor.DARK_PURPLE + "Console", ChatColor.DARK_PURPLE + "[Console]"),
     WEBDEVS("a " + ChatColor.RED + "Web Developer", ChatColor.DARK_RED + "[Web-Dev]"),
     HELPER("a " + ChatColor.RED + "Helper", ChatColor.RED + "[Helper]"),
-    MAN("the " + ChatColor.DARK_RED + "Admin Manager", ChatColor.DARK_RED + "[Admin Manage])"),
+    MAN("the " + ChatColor.DARK_RED + "Admin Manager", ChatColor.DARK_RED + "[Admin Manager]"),
     SRA("a " + ChatColor.LIGHT_PURPLE + "Senior Helper", ChatColor.LIGHT_PURPLE + "[Senior-Helper]"),
     EXCD("the " + ChatColor.BLUE + "Executive Chief Designer", ChatColor.BLUE + "[Executive Chief]"),
     Z("the " + ChatColor.DARK_RED + "Executive Admin Officer", ChatColor.DARK_RED + "[Execuitve Admin Officer]"),

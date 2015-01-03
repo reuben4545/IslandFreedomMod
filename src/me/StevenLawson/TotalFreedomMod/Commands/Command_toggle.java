@@ -35,6 +35,7 @@ public class Command_toggle extends TFM_Command
             playerMsg("- explosives");
             playerMsg("- adminworld");
             playerMsg("- chaos", ChatColor.DARK_RED);
+            playerMsg("- destructive", ChatColor.DARK_RED);
             return false;
         }
 
@@ -121,6 +122,20 @@ public class Command_toggle extends TFM_Command
             TFM_Util.adminAction(sender.getName(), "Toggling Chaos Mode!", false);
             TFM_Util.bcastMsg(!TFM_ConfigEntry.ENABLE_CHAOS.getBoolean() ? "EEEK, HIDE THE FUCKING CHILDREN!!!!!" : "Everyone is safe... FOR NOW...", ChatColor.RED);
             toggle("Chaos mode is", TFM_ConfigEntry.ENABLE_CHAOS);
+            return true;
+        }
+
+            if (args[0].equals("destructive"))
+        {
+            if (!TFM_Util.isHighRank(sender))
+            {
+                TFM_Util.playerMsg(sender, TotalFreedomMod.MSG_NO_PERMS, ChatColor.RED);
+                return true;
+            }
+            TFM_Util.adminAction(sender.getName(), "Toggling Destructive Mode!", false);
+            TFM_Util.bcastMsg(!TFM_ConfigEntry.DESTRUCTIVE_MODE.getBoolean() ? "TNT GO GO GO GO!!!!!" : "K WE CAN STOP BLOWING UP THINGS", ChatColor.RED);
+            toggle("Destruction mode is", TFM_ConfigEntry.DESTRUCTIVE_MODE);
+            server.dispatchCommand(sender, "toggle explosives");
             return true;
         }
 
