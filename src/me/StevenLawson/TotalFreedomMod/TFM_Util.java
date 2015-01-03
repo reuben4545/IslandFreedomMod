@@ -228,7 +228,7 @@ public class TFM_Util
 
     public static void adminAction(String adminName, String action, boolean isRed)
     {
-        TFM_Util.bcastMsg(adminName + " - " + action, (isRed ? ChatColor.RED : ChatColor.AQUA));
+        TFM_Util.bcastMsg(adminName + " - " + action, (isRed ? ChatColor.RED : ChatColor.YELLOW));
     }
 
     public static String getIp(OfflinePlayer player)
@@ -1202,7 +1202,7 @@ public class TFM_Util
         {
             if (TFM_AdminList.isSeniorAdmin(player))
             {
-                player.sendMessage(ChatColor.YELLOW + "[" + ChatColor.RED + "SrA Chat" + ChatColor.YELLOW + "] " + ChatColor.DARK_RED + name + ": " + ChatColor.YELLOW + message);
+                player.sendMessage(ChatColor.YELLOW + "[" + ChatColor.RED + "SrA Chat" + ChatColor.YELLOW + "] " + ChatColor.DARK_RED + name + ": " + ChatColor.LIGHT_PURPLE + message);
             }
         }
     }
