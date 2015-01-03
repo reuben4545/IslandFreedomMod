@@ -910,7 +910,7 @@ public class TFM_PlayerListener implements Listener
                 }
                 if (TFM_ConfigEntry.ENABLE_CHAOS.getBoolean().booleanValue())
                 {
-                    player.sendMessage(ChatColor.RED + "Server is currently in chaos mode, prepare for some crazy shit!");
+                    player.sendMessage(ChatColor.RED + "Server is currently in chaos mode, expect some crazy shit!");
                 }
                 if (TotalFreedomMod.lockdownEnabled)
                 {
@@ -946,7 +946,7 @@ public class TFM_PlayerListener implements Listener
         }
         if (TFM_Util.SYS.contains(player.getName()))
         {
-            player.setPlayerListName(ChatColor.DARK_PURPLE + player.getName());
+            player.setPlayerListName(ChatColor.DARK_RED + player.getName());
             TFM_PlayerData.getPlayerData(player).setTag("&8[&4System Admin&8]");
         }
         else if (TFM_AdminList.isSeniorAdmin(player))
@@ -970,17 +970,17 @@ public class TFM_PlayerListener implements Listener
             player.setPlayerListName(ChatColor.BLUE + player.getName());
             TFM_PlayerData.getPlayerData(player).setTag("&8[&9AFM-Creator&8]");
             //Entrance
-            TFM_Util.bcastMsg(ChatColor.AQUA + "_herobrian35_ is the" + ChatColor.RED + " A CallOfDuty PRO " + ChatColor.AQUA + "and ");
+            TFM_Util.bcastMsg(ChatColor.AQUA + "_herobrian35_ is " + ChatColor.RED + " a COD PRO" + ChatColor.AQUA + " and");
             TFM_Util.bcastMsg(ChatColor.AQUA + "_herobrian35_ LOVES " + ChatColor.RED + "playing XBOX ONE");
         }
-        else if (username.equalsIgnoreCase("RobinGall2910"))
+         if (username.equalsIgnoreCase("RobinGall2910"))
         {
             //set tag
             player.setPlayerListName(ChatColor.GOLD + player.getName());
             TFM_PlayerData.getPlayerData(player).setTag("&8[&4System&8-&4Admin&8]");
             //Entrance
             TFM_Util.bcastMsg(ChatColor.AQUA + "RobinGall2910 is a " + ChatColor.DARK_GREEN + " Zombie Killer " + ChatColor.AQUA + " and.. ");
-            //TFM_Util.bcastMsg(ChatColor.GOLD + ":O  there's more!");
+            TFM_Util.bcastMsg(ChatColor.GOLD + ":O  there's more!");
         }
         else if (username.equalsIgnoreCase("Stampy100"))
         {

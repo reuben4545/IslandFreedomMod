@@ -42,12 +42,9 @@ public class Command_personal extends TFM_Command
             }
             which = args[0];
         }
-        else if (sender.getName().equals("tylerhyperHD") || sender.getName().equals("RobinGall2910") || sender.getName().equals("dsate1") || sender.getName().equals("kieran3810"))
+        else if (sender.getName().equals("eagleeye64000") || sender.getName().equals("R1SSY") || sender.getName().equals("escojay"))
         {
-            which = "myd";
-            which = "book";
-            which = "weed";
-            which = "Blacklepoard";
+            which = "multiEagle";
         }
         else
         {
