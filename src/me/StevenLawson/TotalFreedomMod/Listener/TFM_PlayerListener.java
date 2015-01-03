@@ -908,6 +908,10 @@ public class TFM_PlayerListener implements Listener
                 {
                     player.sendMessage(ChatColor.RED + "Server is currently closed to non-superadmins.");
                 }
+                if (TFM_ConfigEntry.ENABLE_CHAOS.getBoolean().booleanValue())
+                {
+                    player.sendMessage(ChatColor.RED + "Server is currently in chaos mode, prepare for some crazy shit!");
+                }
                 if (TotalFreedomMod.lockdownEnabled)
                 {
                     TFM_Util.playerMsg(player, "Warning: Server is currenty in lockdown-mode, new players will not be able to join!", ChatColor.RED);

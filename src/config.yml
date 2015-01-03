@@ -4,13 +4,13 @@
 # Generic server information
 server:
   # You should change this to your server's name
-  name: FreedomOP
+  name: AlexFreedom
 
   # The address your server is located at
-  address: fop.us.to
+  address: alexfreedom.us.to
 
   # Shown at the server list
-  motd: FreedomOP &8- Fun, Free, and Easy!
+  motd: AlexFreedom &8- Fun, Free, and Easy!
 
   # Every word in the MOTD will be a different color unless prefixed by a color code
   colorful_motd: true
@@ -160,6 +160,7 @@ landmines_enabled: false
 mp44_enabled: false
 tossmob_enabled: false
 adminworld_enabled: true
+enable_chaos: false
 
 # Moblimiter:
 
