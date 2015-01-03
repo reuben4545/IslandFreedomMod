@@ -103,7 +103,7 @@ public class Command_flame extends TFM_Command
                 player.getWorld().createExplosion(player.getLocation(), 4F);
 
                 // kick player
-                player.kickPlayer(ChatColor.RED + "FUK UFF You Beatch!");
+                player.kickPlayer(ChatColor.RED + "FUK UFF You Beatch! (also liek if u cri everi tiem)");
             }
         }.runTaskLater(plugin, 3L * 20L);
 
