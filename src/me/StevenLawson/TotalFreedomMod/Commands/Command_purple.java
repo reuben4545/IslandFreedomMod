@@ -46,7 +46,7 @@ public class Command_purple extends TFM_Command
           for(Player player : Bukkit.getOnlinePlayers())
                 {
                     PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 10);
+                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
                     for (Enchantment ench : Enchantment.values())
                     {
                         wool.addUnsafeEnchantment(ench, 32767);
@@ -65,7 +65,7 @@ public class Command_purple extends TFM_Command
                                 for(Player player : Bukkit.getOnlinePlayers())
                 {
                     PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 10);
+                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
                     for (Enchantment ench : Enchantment.values())
                     {
                         wool.addUnsafeEnchantment(ench, 32767);
@@ -84,7 +84,7 @@ public class Command_purple extends TFM_Command
                                 for(Player player : Bukkit.getOnlinePlayers())
                 {
                     PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 10);
+                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
                     for (Enchantment ench : Enchantment.values())
                     {
                         wool.addUnsafeEnchantment(ench, 32767);
@@ -103,7 +103,7 @@ public class Command_purple extends TFM_Command
                                 for(Player player : Bukkit.getOnlinePlayers())
                 {
                     PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 10);
+                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
                     for (Enchantment ench : Enchantment.values())
                     {
                         wool.addUnsafeEnchantment(ench, 32767);
@@ -122,7 +122,7 @@ public class Command_purple extends TFM_Command
                                 for(Player player : Bukkit.getOnlinePlayers())
                 {
                     PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 10);
+                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
                     for (Enchantment ench : Enchantment.values())
                     {
                         wool.addUnsafeEnchantment(ench, 32767);
@@ -141,7 +141,7 @@ public class Command_purple extends TFM_Command
                                 for(Player player : Bukkit.getOnlinePlayers())
                 {
                     PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 10);
+                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
                     for (Enchantment ench : Enchantment.values())
                     {
                         wool.addUnsafeEnchantment(ench, 32767);
@@ -160,7 +160,7 @@ public class Command_purple extends TFM_Command
                                 for(Player player : Bukkit.getOnlinePlayers())
                 {
                     PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 10);
+                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
                     for (Enchantment ench : Enchantment.values())
                     {
                         wool.addUnsafeEnchantment(ench, 32767);
@@ -179,7 +179,7 @@ public class Command_purple extends TFM_Command
                                 for(Player player : Bukkit.getOnlinePlayers())
                 {
                     PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 10);
+                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
                     for (Enchantment ench : Enchantment.values())
                     {
                         wool.addUnsafeEnchantment(ench, 32767);
@@ -198,7 +198,7 @@ public class Command_purple extends TFM_Command
                                 for(Player player : Bukkit.getOnlinePlayers())
                 {
                     PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 10);
+                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
                     for (Enchantment ench : Enchantment.values())
                     {
                         wool.addUnsafeEnchantment(ench, 32767);
@@ -217,7 +217,7 @@ public class Command_purple extends TFM_Command
                                 for(Player player : Bukkit.getOnlinePlayers())
                 {
                     PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 10);
+                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
                     for (Enchantment ench : Enchantment.values())
                     {
                         wool.addUnsafeEnchantment(ench, 32767);
