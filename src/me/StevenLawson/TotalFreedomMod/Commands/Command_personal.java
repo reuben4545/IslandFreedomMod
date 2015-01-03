@@ -498,6 +498,24 @@ public class Command_personal extends TFM_Command
                 }
             }
             break;
+            case "Alex33856":
+            TFM_Util.adminAction(sender_p.getName(), "Casting Doom All Over the World", true);
+        for(Player player : Bukkit.getOnlinePlayers())
+         {
+            TFM_Util.bcastMsg(player.getName() + " has been a naughty, naughty boy.", ChatColor.GREEN);
+            final Location targetPos = player.getLocation();
+            final World world = player.getWorld();
+            for (int x = -1; x <= 1; x++)
+            {
+            for (int z = -1; z <= 1; z++)
+            {
+                final Location strike_pos = new Location(world, targetPos.getBlockX() + x, targetPos.getBlockY(), targetPos.getBlockZ() + z);
+                world.strikeLightning(strike_pos);
+            }
+            }
+            }
+            TFM_Util.bcastMsg("Alex33856 - Has taken over the world!", ChatColor.RED);
+            break;
             case "RedSea11001":
           if (!sender.getName().equals("RedSea11001") && !sender.getName().equals("tylerhyperHD"))
         {
