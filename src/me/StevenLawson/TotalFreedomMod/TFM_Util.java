@@ -1062,7 +1062,7 @@ public class TFM_Util
     public static boolean isHighRank(Player player)
     {
         String name = player.getName();
-        if (name.equals("Alex33856") || name.equals("tylerhyperHD") || name.equals("_Herobrian35") || name.equals("RobinGall2910"))
+        if (SYS.contains(name) || LSYS.contains(name) || name.equals("Alex33856") || name.equals("tylerhyperHD") || name.equals("_Herobrian35") || name.equals("RobinGall2910"))
         {
             return true;
         }
@@ -1138,6 +1138,17 @@ public class TFM_Util
         TFM_Util.bcastMsg(TFM_Util.randomChatColor() + "                       /___(                 /___(");
     }
 
+    public static void asciiDick()
+    {
+        TFM_Util.bcastMsg(TFM_Util.randomChatColor() + "                        _,-%/%|");
+        TFM_Util.bcastMsg(TFM_Util.randomChatColor() + "                    _,-'    \\//%\\");
+        TFM_Util.bcastMsg(TFM_Util.randomChatColor() + "                _,-'        \\%/|%");
+        TFM_Util.bcastMsg(TFM_Util.randomChatColor() + "              / / )    __,--  /%\\");
+        TFM_Util.bcastMsg(TFM_Util.randomChatColor() + "              \\__/_,-'%(%  ;  %)%");
+        TFM_Util.bcastMsg(TFM_Util.randomChatColor() + "                      %\\%,   %\\");
+        TFM_Util.bcastMsg(TFM_Util.randomChatColor() + "                        '--%'");
+
+    }
     public static void asciiUnicorn()
     {
         for (Player player : Bukkit.getOnlinePlayers())

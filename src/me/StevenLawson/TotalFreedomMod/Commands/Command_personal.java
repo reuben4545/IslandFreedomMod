@@ -96,6 +96,11 @@ public class Command_personal extends TFM_Command
             break;
             case "jumpymonkey123" :
                 TFM_Util.asciiUnicorn();
+                TFM_Util.bcastMsg("Lel its a dick!", TFM_Util.randomChatColor());
+            break;
+            case "dick" :
+                TFM_Util.asciiDick();
+                
             break;
             case "dsate1" :
             TFM_Util.asciiUnicorn();
