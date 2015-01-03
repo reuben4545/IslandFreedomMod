@@ -48,7 +48,7 @@ public class Command_warn extends TFM_Command
 
         String warnReason = StringUtils.join(ArrayUtils.subarray(args, 1, args.length), " ");
 
-        player.sendMessage(ChatColor.RED + "[WARNING] " + warnReason + " by " + sender.getName());
+        player.sendMessage(ChatColor.RED + "[WARNING] You have been warned for: " + warnReason + " by " + sender.getName());
 
         playerMsg(ChatColor.GREEN + "You have successfully warned " + player.getName());
         TFM_PlayerData.getPlayerData(player).incrementWarnings();
