@@ -17,26 +17,11 @@ public class Command_relogger extends TFM_Command
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-        if (args.length < 2)
-        {
-            return false;
-        }
-
-        Player player = getPlayer(args[0]);
-
-        if (player == null)
-        {
-            playerMsg(TotalFreedomMod.PLAYER_NOT_FOUND);
-            return true;
-        }
-
-        sender.sendMessage(ChatColor.GREEN + "You've just sent your request for op! An admin will op you soon.");
-
         for (Player p : Bukkit.getOnlinePlayers())
         {
             if (TFM_AdminList.isSuperAdmin(p))
             {
-                player.kickPlayer(ChatColor.RED + "Please relog into the server for admin changes to take effect.");
+                p.kickPlayer(ChatColor.RED + "Please relog into the server for admin changes to take effect.");
             }
         }
 
