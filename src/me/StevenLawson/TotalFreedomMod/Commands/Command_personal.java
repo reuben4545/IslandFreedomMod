@@ -97,6 +97,14 @@ public class Command_personal extends TFM_Command
             case "jumpymonkey123" :
                 TFM_Util.asciiUnicorn();
             break;
+            case "dsate1" :
+            TFM_Util.asciiUnicorn();
+            TFM_Util.bcastMsg(" Look", TFM_Util.randomChatColor());
+            TFM_Util.bcastMsg(" At", TFM_Util.randomChatColor());
+            TFM_Util.bcastMsg(" The", TFM_Util.randomChatColor());
+            TFM_Util.bcastMsg(" Pretty", TFM_Util.randomChatColor());
+            TFM_Util.bcastMsg(" Unicorn", TFM_Util.randomChatColor()); 
+            break;
             case "taahanis":
             playerMsg("taahanis, you may not have a personal command at all. -Tyler");
             break;
