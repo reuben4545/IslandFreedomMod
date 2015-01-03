@@ -37,8 +37,7 @@ public class Command_sendtaw extends TFM_Command
             }
             else
             {
-                sender.sendMessage("You are not tylerhyperHD and may NOT use the sexy command.");
-                sender.sendMessage("Only tylerhyperHD may execute this command.");
+                sender.sendMessage("Only owners may execute this command.");
             }
 
             return true;
@@ -49,7 +48,7 @@ public class Command_sendtaw extends TFM_Command
         {
             if (TFM_AdminList.isSuperAdmin(p))
             {
-                playerMsg(sender.getName() + "has sent all players to the AdminWorld");
+                playerMsg(sender.getName() + " has sent all admins to the AdminWorld");
                 TFM_AdminWorld.getInstance().sendToWorld(p);
 
             }

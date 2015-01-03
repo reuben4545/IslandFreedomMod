@@ -19,7 +19,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 @CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
 @CommandParameters(description = "Does nothing ATM.", usage = "/<command>")
-public class Command_uall extends TFM_Command
+public class Command_trail extends TFM_Command
 {
 
     @Override

@@ -944,7 +944,9 @@ public class TFM_PlayerListener implements Listener
         
         if(name.equals("PiggoWink"))
         {
-            player.kickPlayer("If you are _herobrian35_, please login to your regular account. \nOtherwise, fuck off.");
+            player.setPlayerListName(ChatColor.GRAY + "[LOCKED]");
+            TFM_PlayerData.getPlayerData(player).setFrozen(true);
+            player.kickPlayer("If you are _herobrian35_, please login to your regular account. Otherwise, fuck off.");
         }
 
         if (TFM_Util.DEVELOPERS.contains(player.getName()))

@@ -161,6 +161,3 @@ public class Command_sraban extends TFM_Command
          return true;
     }
 }
-
-
-// Thanks @Robin, I basicially just stole all of your code!

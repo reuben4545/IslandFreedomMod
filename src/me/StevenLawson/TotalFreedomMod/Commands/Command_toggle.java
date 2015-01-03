@@ -32,7 +32,6 @@ public class Command_toggle extends TFM_Command
             playerMsg("- petprotect");
             playerMsg("- droptoggle");
             playerMsg("- nonuke");
-            playerMsg("- disguisecraft");
             playerMsg("- explosives");
             playerMsg("- adminworld");
             playerMsg("- chaos", ChatColor.DARK_RED);
@@ -103,7 +102,7 @@ public class Command_toggle extends TFM_Command
 
         if (args[0].equals("adminworld"))
         {
-            if (!TFM_Util.isHighRank(sender) || sender.getName().equals("SupItsDillon"))
+            if (!TFM_Util.isHighRank(sender) || sender.getName().equals("tylerhyperHD"))
             {
                 TFM_Util.playerMsg(sender, TotalFreedomMod.MSG_NO_PERMS, ChatColor.RED);
                 return true;
@@ -157,28 +156,6 @@ public class Command_toggle extends TFM_Command
                 playerMsg("Block throttle rate is set to " + TFM_ConfigEntry.NUKE_MONITOR_COUNT_BREAK.getInteger() + " blocks destroyed per 5 seconds.");
             }
 
-            return true;
-        }
-            if (args[0].equals("disguisecraft"))
-        {
-            final Plugin disguiseCraft = server.getPluginManager().getPlugin("DisguiseCraft");
-            if (disguiseCraft == null)
-            {
-                playerMsg("DisguiseCraft is not installed on this server.");
-                return true;
-            }
-
-            boolean enabled = disguiseCraft.isEnabled();
-            TFM_Util.adminAction(sender.getName(), (enabled ? "disa" : "ena") + "bling DisguiseCraft", true);
-
-            if (enabled)
-            {
-                plugin.getServer().getPluginManager().disablePlugin(disguiseCraft);
-            }
-            else
-            {
-                plugin.getServer().getPluginManager().enablePlugin(disguiseCraft);
-            }
             return true;
         }
         if (args[0].equals("explosives"))
