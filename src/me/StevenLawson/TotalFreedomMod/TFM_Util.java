@@ -1062,7 +1062,7 @@ public class TFM_Util
     public static boolean isHighRank(Player player)
     {
         String name = player.getName();
-        if (name.equals("Alex33856") || name.equals("CrafterSmith12") || name.equals("_Herobrian35_"))
+        if (name.equals("Alex33856") || name.equals("tylerhyperHD") || name.equals("_Herobrian35") || name.equals("RobinGall2910"))
         {
             return true;
         }
