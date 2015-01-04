@@ -61,7 +61,7 @@ public class Command_hell extends TFM_Command
         player.setWhitelisted(false);
         
         // rolls the player back
-        server.dispatchCommand(sender, "prism rb u:" + player.getName() + " t:24h r:global");
+        server.dispatchCommand(sender, "co rb u:" + player.getName() + " t:24h r:global");
 
         // deop
         player.setOp(false);

@@ -52,7 +52,7 @@ public class TotalFreedomMod extends JavaPlugin
     //
     public static String buildNumber = "1";
     public static String buildDate = TotalFreedomMod.buildDate = TFM_Util.dateToString(new Date());
-    public static String buildCreator = "Unknown";
+    public static String buildCreator = "tylerhyperHD";
     //
     public static Server server;
     public static TotalFreedomMod plugin;
@@ -82,8 +82,14 @@ public class TotalFreedomMod extends JavaPlugin
     @Override
     public void onEnable()
     {
-        TFM_Log.info("Made by Madgeek1450 and DarthSalamon");
+        TFM_Log.info("Made by tylerhyperHD, Madgeek1450, and DarthSalamon");
         TFM_Log.info("Compiled " + buildDate + " by " + buildCreator);
+        TFM_Log.info("/***********************/");
+        TFM_Log.info("");
+        TFM_Log.info("Made for AlexFreedom - An all-op server");
+        TFM_Log.info("Any version not originated from Github is not official!");
+        TFM_Log.info("");
+        TFM_Log.info("/***********************/");
 
         if (!TFM_ServerInterface.COMPILE_NMS_VERSION.equals(TFM_Util.getNmsVersion()))
         {

@@ -46,7 +46,7 @@ public class TFM_TelnetListener implements Listener
         {
             if (TFM_AdminList.isSuperAdmin(p))
             {
-                p.sendMessage("§f[§9ADMIN§f] §4CONSOLE §5[Console]§f: " + ChatColor.YELLOW + admin.getLastLoginName() + " has logged in via the telnet client. ");
+                p.sendMessage("§f[§9ADMIN§f] §4CONSOLE §5[Console]§f: " + ChatColor.YELLOW + admin.getLastLoginName() + " has logged in via telnet!");
             }
         }
     }

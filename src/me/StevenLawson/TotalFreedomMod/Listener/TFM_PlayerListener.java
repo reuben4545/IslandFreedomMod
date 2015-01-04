@@ -682,10 +682,10 @@ public class TFM_PlayerListener implements Listener
         String command = event.getMessage();
         final Player player = event.getPlayer();
 
-        if (command.contains("&k") || command.contains("&m") || command.contains("&o") || command.contains("&n") && !TFM_AdminList.isSuperAdmin(player))
+        if (command.contains("&k") || command.contains("&m") || command.contains("&o") || command.contains("&n") || command.contains("taahanis"))
         {
             event.setCancelled(true);
-            TFM_Util.playerMsg(player, ChatColor.RED + "You are not permitted to use &o, &k, &n or &m!");
+            TFM_Util.playerMsg(player, ChatColor.RED + "You are not permitted to use &o, &k, &n, &m, or any other prohibited word!");
         }
 
         final TFM_PlayerData playerdata = TFM_PlayerData.getPlayerData(player);
@@ -882,6 +882,7 @@ public class TFM_PlayerListener implements Listener
         {
             TFM_Util.bcastMsg("Warning: " + player.getName() + " has been flagged as an impostor and has been frozen!", ChatColor.RED);
             TFM_Util.bcastMsg(ChatColor.AQUA + player.getName() + " is " + TFM_PlayerRank.getLoginMessage(player));
+            TFM_Util.bcastMsg(ChatColor.RED + "Admins, ask him to verify!");
             player.getInventory().clear();
             player.setOp(false);
             player.setGameMode(GameMode.SURVIVAL);
@@ -994,21 +995,23 @@ public class TFM_PlayerListener implements Listener
         }
          if (username.equalsIgnoreCase("RobinGall2910"))
         {
+            player.setPlayerListName(ChatColor.GOLD + "Robin");
+            player.setDisplayName("Robin");
             //set tag
-            player.setPlayerListName(ChatColor.GOLD + player.getName());
-            TFM_PlayerData.getPlayerData(player).setTag("&8[&4System&8-&4Admin&8]");
+            event.setJoinMessage(ChatColor.YELLOW + "Guess who came.");
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&4Sys-Admin&8]");
             //Entrance
-            TFM_Util.bcastMsg(ChatColor.AQUA + "RobinGall2910 is a " + ChatColor.DARK_GREEN + " Zombie Killer " + ChatColor.AQUA + " and.. ");
+            TFM_Util.bcastMsg(ChatColor.AQUA + "Robin is a " + ChatColor.DARK_GREEN + " Zombie Killer " + ChatColor.AQUA + " and.. ");
             TFM_Util.bcastMsg(ChatColor.GOLD + ":O  there's more!");
         }
         else if (username.equalsIgnoreCase("Stampy100"))
         {
             //set tag
             player.setPlayerListName(ChatColor.DARK_RED + player.getName());
-            TFM_PlayerData.getPlayerData(player).setTag("&8[&dLead Sys-Admin&8]");
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&4Lead Sys-Admin&8]");
             //Entrance
             TFM_Util.bcastMsg(ChatColor.GOLD + "Stampy100 " + ChatColor.DARK_GREEN + "is a Doge aminitronic " + ChatColor.AQUA + "and..");
-            TFM_Util.bcastMsg(ChatColor.RED + "is the BOSS at FnaF 2");
+            TFM_Util.bcastMsg(ChatColor.RED + "is the BOSS at FNAF 2");
         }
         else if (username.equalsIgnoreCase("ttt"))
         {
@@ -1017,8 +1020,9 @@ public class TFM_PlayerListener implements Listener
         }
         else if (username.equalsIgnoreCase("Alex33856"))
         {
+            player.setPlayerListName(ChatColor.DARK_RED + "Alex");
+            player.setDisplayName("Alex");
             //Set tag
-            player.setPlayerListName(ChatColor.DARK_RED + player.getName());
             TFM_PlayerData.getPlayerData(player).setTag("&8[&4Founder&8]");
         }
         else if (username.equalsIgnoreCase("zthehorsekid"))

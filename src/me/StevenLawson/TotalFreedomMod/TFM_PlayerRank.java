@@ -11,8 +11,8 @@ public enum TFM_PlayerRank
 {
     EXECUTIVE("an " + ChatColor.BLUE + "Executive", ChatColor.BLUE + "[Executive]"),
     CoOwner("the " + ChatColor.BLUE + "Co-Owner", ChatColor.BLUE + "[Co-Owner]"),
-    CDEV("the " + ChatColor.BLUE + "AlexFreedomMod Creator!", ChatColor.BLUE + "[AFM-Creator]"),
-    FARAH("a " + ChatColor.LIGHT_PURPLE + "Senior Admin" + ChatColor.AQUA + " and is" + ChatColor.GREEN + " bae", ChatColor.DARK_RED + "[Chief of Security]"),
+    CDEV("the " + ChatColor.BLUE + "AlexFreedomMod Creator", ChatColor.BLUE + "[AFM-Creator]"),
+    FARAH("a " + ChatColor.LIGHT_PURPLE + "Senior Admin" + ChatColor.AQUA + " and is" + ChatColor.GREEN + " bae", ChatColor.LIGHT_PURPLE + "[SrA]"),
     SECURITY("the chief of " + ChatColor.RED + "Security", ChatColor.DARK_RED + "[Chief of Security]"),
     SYS("a " + ChatColor.DARK_RED + "System Admin", ChatColor.DARK_RED + "[Sys-Admin]"),
     DEVELOPER("a " + ChatColor.DARK_PURPLE + "Developer", ChatColor.DARK_PURPLE + "[Dev]"),
