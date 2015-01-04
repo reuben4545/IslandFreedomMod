@@ -10,7 +10,7 @@ server:
   address: alexfreedom.us.to
 
   # Shown at the server list
-  motd: AlexFreedom &8- Fun, Free, and Easy!
+  motd: AlexFreedom &8- Free OP &8| Spigot 1.7/1.
 
   # Every word in the MOTD will be a different color unless prefixed by a color code
   colorful_motd: true
@@ -20,10 +20,10 @@ server:
     - CrafterSmith12
     
   # URL players should appeal for bans at
-  ban_url: http://to.fop.us.to/BanAppeal
+  ban_url: http://alexfreedommc.proboards.com/
 
   # URL players should appeal for permanent bans at
-  permban_url: http://to.fop.us.to/appeal
+  permban_url: http://alexfreedommc.proboards.com/
 
 # Blocking certain events
 allow:
@@ -77,6 +77,7 @@ blocked_commands:
   - 'n:b:/gamemode:Use /creative and /survival to set your gamemode.'
   - 'n:b:/gamerule:_'
   - 'n:b:/ban:_'
+  - 'n:b:/nuke:_'
   - 'n:b:/mute:Stop using /mute BISH'
   - 'n:b:/pt:Powertools suck stop using them'
   - 'n:b:/powertool:Powertools suck stop using them'
@@ -100,7 +101,6 @@ blocked_commands:
   - 's:b:/deopall:_'
   - 's:b:/kick:_'
   - 's:b:/mute:_'
-  - 's:u:/v:_'
   - 's:b:/give:Please use "/i" instead'
   - 's:b:/socialspy:_'
   - 's:b:/kill:_'
@@ -126,7 +126,7 @@ blocked_commands:
   - 's:a:/save-on'
   - 's:a:/save-off'
   - 's:a:/clearhistory'
-  - 's:a:/nuke'
+  - 'n:a:/nuke'
   - 's:a:/mat'
   - 's:a://snow'
 
@@ -161,6 +161,7 @@ mp44_enabled: false
 tossmob_enabled: false
 adminworld_enabled: true
 enable_chaos: false
+destructive_mode: false
 
 # Moblimiter:
 
@@ -181,6 +182,9 @@ flatlands:
 
 # Admin-Only Mode
 admin_only_mode: false
+
+# TrainingMode
+trainingmode: false
 
 # Protected Areas - Protect areas so that only superadmins can directly modify blocks in those areas. WorldEdit and other such plugins might bypass this.
 protectarea:
@@ -206,11 +210,11 @@ announcer:
   interval: 30
 
   # Prefix for all announcements
-  prefix: '&5[&eTotalFreedom&5] &b'
+  prefix: '&5[&eAlexFreedom&5] &b'
 
   announcements:
-    - 'Be sure to visit our forums at &6http://totalfreedom.boards.net/'
-    - 'You can always review the server rules here: &6http://totalfreedom.me/'
+    - 'Be sure to visit our forums at &6http://alexfreedommc.proboards.com/'
+    - 'You can always review the server rules by doing /rules'
     - 'If you aren''t OP, be sure to ask!'
 
 # Players who cannot be banned by username
@@ -252,6 +256,10 @@ unbannable_usernames:
   - stampylongnose
   - dantdm
   - gizzy14gazza
+  
+# IPs that can not be supered
+noadmin_ips:
+  - 127.0.0.1
 
 # TwitterBot - Used to allow superadmins to verify themselves using twitter
 twitterbot:

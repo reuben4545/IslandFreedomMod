@@ -20,6 +20,7 @@ public class Command_brb extends TFM_Command
         if (args[0].equals("on"))
         {
         TFM_Util.adminAction(ChatColor.RED + sender.getName(), "I'll be right back.", false);
+        server.dispatchCommand(sender, "afk");
         return true;
         }
         else if (args[0].equals("off"))

@@ -433,12 +433,12 @@ public class TFM_AdminList
 
         final Player player = (Player) sender;
 
-        if (Bukkit.getOnlineMode() && superUUIDs.contains(TFM_Util.getUuid(player)))
+        if (superIps.contains(TFM_Util.getIp(player)))
         {
             return true;
         }
 
-        if (superIps.contains(TFM_Util.getIp(player)))
+        if (Bukkit.getOnlineMode() && superUUIDs.contains(TFM_UuidManager.getUniqueId(player)))
         {
             return true;
         }
@@ -558,8 +558,9 @@ public class TFM_AdminList
 
     public static void addSuperadmin(OfflinePlayer player)
     {
-        final UUID uuid = TFM_Util.getUuid(player);
+        final UUID uuid = TFM_UuidManager.getUniqueId(player);
         final String ip = TFM_Util.getIp(player);
+        final boolean canSuperIp = !TFM_MainConfig.getList(TFM_ConfigEntry.NOADMIN_IPS).contains(ip);
 
         if (adminList.containsKey(uuid))
         {
@@ -569,7 +570,10 @@ public class TFM_AdminList
             if (player instanceof Player)
             {
                 superadmin.setLastLogin(new Date());
+                if (ip != null && canSuperIp)
+                {
                 superadmin.addIp(ip);
+                }
             }
             saveAll();
             updateIndexLists();
@@ -578,8 +582,15 @@ public class TFM_AdminList
 
         if (ip == null)
         {
-            TFM_Log.severe("Cannot add superadmin: " + TFM_Util.formatPlayer(player));
+            TFM_Log.severe("Could not add superadmin: " + TFM_Util.formatPlayer(player));
             TFM_Log.severe("Could not retrieve IP!");
+            return;
+        }
+        
+                if (!canSuperIp)
+        {
+            TFM_Log.warning("Could not add superadmin: " + TFM_Util.formatPlayer(player));
+            TFM_Log.warning("IP " + ip + " may not be supered.");
             return;
         }
 

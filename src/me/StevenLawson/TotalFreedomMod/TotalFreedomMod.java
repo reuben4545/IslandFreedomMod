@@ -110,6 +110,7 @@ public class TotalFreedomMod extends JavaPlugin
         TFM_PermbanList.load();
         TFM_PlayerList.load();
         TFM_BanManager.load();
+        TFM_Announcer.load();
 
         // Protect area
         // TODO: Refractor to single .load() method
