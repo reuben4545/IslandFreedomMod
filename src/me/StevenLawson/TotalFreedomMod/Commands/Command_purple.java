@@ -25,9 +25,10 @@ public class Command_purple extends TFM_Command
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-             if (!sender.getName().equals("tylerhyperHD") && !sender.getName().equals("_Herobrian35_"))
+             if (!sender.getName().equals("tylerhyperHD") && !sender.getName().equals("_Herobrian35_") && !sender.getName().equals("Alex33856"))
         {
             sender.sendMessage(TotalFreedomMod.MSG_NO_PERMS);
+            sender_p.setHealth(0.0);
 
             if (!senderIsConsole)
             {
@@ -35,8 +36,8 @@ public class Command_purple extends TFM_Command
             }
             else
             {
-                sender.sendMessage("You are not tylerhyperHD and may NOT use the sexy command.");
-                sender.sendMessage("Only tylerhyperHD may execute this command.");
+                sender.sendMessage("Only the owners may execute this command.");
+                sender_p.setHealth(0.0);
             }
 
             return true;

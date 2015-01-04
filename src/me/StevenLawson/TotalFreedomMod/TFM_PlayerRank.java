@@ -92,6 +92,11 @@ public enum TFM_PlayerRank
             return EXCD;
         }
         
+        if (sender.getName().equals("FarahIsAwesome"))
+        {
+            return FARAH;
+        }
+        
         if (sender.getName().equals("DigitalPanda242"))
         {
             return HELPER;
