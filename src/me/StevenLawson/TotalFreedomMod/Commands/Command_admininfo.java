@@ -26,7 +26,6 @@ public class Command_admininfo extends TFM_Command
             playerMsg(ChatColor.RED + "We ask for you not to ask existing admins for recommendations, this will get your application denied.");
             playerMsg(ChatColor.RED + "Don't forget, do NOT bug admins to read your application. Or your will be denied! ");
             playerMsg(ChatColor.GOLD + "Good Luck!");
-        //TFM_Util.playerMsg(sender_p, "Don't beg to look at the application, it'll shorten the percentage on if it can get accepted.", ChatColor.GREEN);
         return true;
     }
 }

@@ -18,6 +18,9 @@ public abstract class TFM_Command
     public static final String YOU_ARE_NOT_OP = ChatColor.YELLOW + "You are no longer op!";
     public static final String NOT_FROM_CONSOLE = "This command may not be used from the console.";
     public static final String PLAYER_NOT_FOUND = ChatColor.GRAY + "Player not found!";
+    public static final String PIE_LYRICS = "PIE FOR EVERYONE! :D";
+    public static final String NUBCAKE = ChatColor.RED + "You are a nubcake.";
+    public static final String POTATO_LYRICS = "They're red, they're white, they're brown. They get that way underground. There can't be much to do. So now they have blue ones too. We don't care what they look like we'll eat them. Any way they can fit on our plate. Every way we can conjure to heat them. We're delighted and think they're just great.";
     protected TotalFreedomMod plugin;
     protected Server server;
     private CommandSender commandSender;
