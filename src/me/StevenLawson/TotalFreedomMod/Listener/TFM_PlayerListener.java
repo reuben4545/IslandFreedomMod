@@ -1006,6 +1006,9 @@ public class TFM_PlayerListener implements Listener
         }
         else if (username.equalsIgnoreCase("Stampy100"))
         {
+            player.setPlayerListName(ChatColor.RED + "Doge");
+            player.setDisplayName("Doge");
+            TFM_EssentialsBridge.setNickname(player.getName(), ChatColor.RED + "DarkDoge108");
             //set tag
             player.setPlayerListName(ChatColor.DARK_RED + player.getName());
             TFM_PlayerData.getPlayerData(player).setTag("&8[&4Lead Sys-Admin&8]");
