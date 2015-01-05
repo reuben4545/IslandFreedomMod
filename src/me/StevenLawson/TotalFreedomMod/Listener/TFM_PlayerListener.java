@@ -1029,18 +1029,19 @@ public class TFM_PlayerListener implements Listener
             //Set tag
             TFM_PlayerData.getPlayerData(player).setTag("&8[&4Founder&8]");
         }
+        else if (username.equalsIgnoreCase("dsate1"))
+        {
+            player.setPlayerListName(ChatColor.DARK_PURPLE + "G" + ChatColor.LIGHT_PURPLE + "r" + ChatColor.DARK_PURPLE + "a" + ChatColor.LIGHT_PURPLE + "c" + ChatColor.DARK_PURPLE + "i" + ChatColor.LIGHT_PURPLE + "e");
+            player.setDisplayName("Gracie");
+            //Set tag
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&5Developer&8]");
+        }
         else if (username.equalsIgnoreCase("zthehorsekid"))
         {
             //Set tag
             player.setPlayerListName(ChatColor.DARK_RED + player.getName());
             TFM_PlayerData.getPlayerData(player).setTag("&8[&4Executive Admin&8]");
-        }
-        else if (username.equalsIgnoreCase("dsate1"))
         {
-            //Set tag
-            player.setPlayerListName(ChatColor.DARK_PURPLE + player.getName());
-            TFM_PlayerData.getPlayerData(player).setTag("&8[&5Developer&8]");
-        }
         else if (username.equalsIgnoreCase("kieran3810"))
         {
             //Set tag
