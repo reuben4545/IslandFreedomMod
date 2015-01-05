@@ -18,33 +18,49 @@ import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
 
 @CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
-@CommandParameters(description = "Graces the world with purple. Command that is pretty pointless unless you are tyler.", usage = "/<command>")
+@CommandParameters(description = "Gives the player a cock to suck.", usage = "/<command> [player]")
 public class Command_dick extends TFM_Command
 {
 
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-             if (!sender.getName().equals("tylerhyperHD") && !sender.getName().equals("_Herobrian35_"))
+                if (args.length != 1)
         {
-            sender.sendMessage(TotalFreedomMod.MSG_NO_PERMS);
+            return false;
+        }
 
-            if (!senderIsConsole)
-            {
-                sender.setOp(false);
-            }
-            else
-            {
-                sender.sendMessage("You are not tylerhyperHD and may NOT use the sexy command.");
-                sender.sendMessage("Only tylerhyperHD may execute this command.");
-            }
+        final Player player = getPlayer(args[0]);
 
+        if (player == null)
+        {
+            sender.sendMessage(TotalFreedomMod.PLAYER_NOT_FOUND);
             return true;
         }
-            if (args.length == 0)
-        {
-            sender_p.sendMessage("This command doesn't have any use yet. Be ready to use it soon.");
-    }
+        Player p;
+        p = getPlayer(args[1]);
+        TFM_Util.bcastMsg(p.getName() + " is being a dick head.", ChatColor.RED);
+        p.sendMessage(ChatColor.RED + "What the hell are you doing you stupid dick?");
+        p.sendMessage(ChatColor.RED + "Have a cock to suck.");
+        TFM_Util.asciiDick();
+        Location l = p.getLocation();
+        for (int x = -1; x <= 1; x++) {
+          for (int z = -1; z <= 1; z++)
+          {
+            Location strikePos = new Location(l.getWorld(), l.getBlockX() + x, l.getBlockY(), l.getBlockZ() + z);
+            l.getWorld().strikeLightning(strikePos);
+            l.getWorld().strikeLightning(strikePos);
+            l.getWorld().strikeLightning(strikePos);
+            l.getWorld().strikeLightning(strikePos);
+            l.getWorld().strikeLightning(strikePos);
+            l.getWorld().strikeLightning(strikePos);
+            l.getWorld().strikeLightning(strikePos);
+            l.getWorld().strikeLightning(strikePos);
+            l.getWorld().strikeLightning(strikePos);
+            l.getWorld().strikeLightning(strikePos);
+          }
+        }
+        p.setHealth(0.0D);
     return true;
 }
 }
