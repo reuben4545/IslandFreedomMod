@@ -1,31 +1,28 @@
 package me.StevenLawson.TotalFreedomMod.Commands;
 
-import java.util.Arrays;
-import java.util.List;
+import me.StevenLawson.TotalFreedomMod.TFM_GameRuleHandler;
+import me.StevenLawson.TotalFreedomMod.TFM_PlayerData;
 import me.StevenLawson.TotalFreedomMod.TFM_Util;
 import me.StevenLawson.TotalFreedomMod.TotalFreedomMod;
+import net.minecraft.util.org.apache.commons.lang3.ArrayUtils;
+import net.minecraft.util.org.apache.commons.lang3.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
-import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.scheduler.BukkitRunnable;
 
 @CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
-@CommandParameters(description = "Gives the player a cock to suck.", usage = "/<command> [player]")
+@CommandParameters(
+        description = "Destroy the fucking dick.",
+        usage = "/<command> [player]")
 public class Command_dick extends TFM_Command
 {
-
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-                if (args.length != 1)
+        if (args.length != 1)
         {
             return false;
         }
@@ -37,30 +34,30 @@ public class Command_dick extends TFM_Command
             sender.sendMessage(TotalFreedomMod.PLAYER_NOT_FOUND);
             return true;
         }
-        Player p;
-        p = getPlayer(args[1]);
-        TFM_Util.bcastMsg(p.getName() + " is being a dick head.", ChatColor.RED);
-        p.sendMessage(ChatColor.RED + "What the hell are you doing you stupid dick?");
-        p.sendMessage(ChatColor.RED + "Have a cock to suck.");
-        TFM_Util.asciiDick();
-        Location l = p.getLocation();
-        for (int x = -1; x <= 1; x++) {
-          for (int z = -1; z <= 1; z++)
-          {
-            Location strikePos = new Location(l.getWorld(), l.getBlockX() + x, l.getBlockY(), l.getBlockZ() + z);
-            l.getWorld().strikeLightning(strikePos);
-            l.getWorld().strikeLightning(strikePos);
-            l.getWorld().strikeLightning(strikePos);
-            l.getWorld().strikeLightning(strikePos);
-            l.getWorld().strikeLightning(strikePos);
-            l.getWorld().strikeLightning(strikePos);
-            l.getWorld().strikeLightning(strikePos);
-            l.getWorld().strikeLightning(strikePos);
-            l.getWorld().strikeLightning(strikePos);
-            l.getWorld().strikeLightning(strikePos);
-          }
-        }
-        p.setHealth(0.0D);
-    return true;
-}
+        TFM_Util.bcastMsg(player.getName() + " is being a dick head.", ChatColor.RED);
+        player.sendMessage(ChatColor.RED + "What the hell are you doing you stupid dick?");
+        player.sendMessage(ChatColor.RED + "Have a cock to suck.");
+        player.sendMessage(TFM_Util.randomChatColor() + "                        _,-%/%|");
+        player.sendMessage(TFM_Util.randomChatColor() + "                    _,-'    \\//%\\");
+        player.sendMessage(TFM_Util.randomChatColor() + "                _,-'        \\%/|%");
+        player.sendMessage(TFM_Util.randomChatColor() + "              / / )    __,--  /%\\");
+        player.sendMessage(TFM_Util.randomChatColor() + "              \\__/_,-'%(%  ;  %)%");
+        player.sendMessage(TFM_Util.randomChatColor() + "                      %\\%,   %\\");
+        player.sendMessage(TFM_Util.randomChatColor() + "                        '--%'");
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().strikeLightning(player.getLocation());
+        new BukkitRunnable()
+        {
+       @Override
+       public void run()
+       {
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().strikeLightning(player.getLocation());
+        player.setHealth(0.0);
+       }
+       }.runTaskLater(plugin, 2L * 2L);
+      return true;
+    }
 }
