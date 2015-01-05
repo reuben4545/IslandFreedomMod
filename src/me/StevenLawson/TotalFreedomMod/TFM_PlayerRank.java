@@ -97,6 +97,11 @@ public enum TFM_PlayerRank
             return FARAH;
         }
         
+        if (sender.getName().equals("DF_Crafted"))
+        {
+            return SYS;
+        }
+        
         if (sender.getName().equals("DigitalPanda242"))
         {
             return HELPER;
