@@ -1004,6 +1004,11 @@ public class TFM_PlayerListener implements Listener
             TFM_Util.bcastMsg(ChatColor.AQUA + "Robin is a " + ChatColor.DARK_GREEN + " Zombie Killer " + ChatColor.AQUA + " and.. ");
             TFM_Util.bcastMsg(ChatColor.GOLD + ":O  there's more!");
         }
+        else if (username.equalsIgnoreCase("DF_Crafted"))
+        {
+            player.setPlayerListName(ChatColor.DARK_RED + player.getName());
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&4Sys-Admin&8]");
+        }
         else if (username.equalsIgnoreCase("Stampy100"))
         {
             player.setPlayerListName(ChatColor.RED + "Doge");
@@ -1047,7 +1052,7 @@ public class TFM_PlayerListener implements Listener
             player.setPlayerListName(ChatColor.DARK_PURPLE + "Kieran");
             TFM_PlayerData.getPlayerData(player).setTag("&8[&5Developer&8]");
             //Entrance
-            TFM_Util.bcastMsg(ChatColor.RED + "kieran3810 is a " + ChatColor.DARK_PURPLE + "Boss Coder " + ChatColor.AQUA + "and.. ");
+            TFM_Util.bcastMsg(ChatColor.AQUA + "kieran3810 is a " + ChatColor.DARK_PURPLE + "Boss Coder " + ChatColor.AQUA + "and.. ");
         }
         
         else if (username.equalsIgnoreCase("death_creeper865"))
