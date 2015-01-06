@@ -15,8 +15,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 @CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
 @CommandParameters(
-        description = "Destroy the fucking dick.",
-        usage = "/<command> [player]")
+        description = "Destroy the fucking dick.", usage = "/<command> [player]", aliases = "cock,penis")
 public class Command_dick extends TFM_Command
 {
     @Override
@@ -35,8 +34,6 @@ public class Command_dick extends TFM_Command
             return true;
         }
         TFM_Util.bcastMsg(player.getName() + " is being a dick head.", ChatColor.RED);
-        player.sendMessage(ChatColor.RED + "What the hell are you doing you stupid dick?");
-        player.sendMessage(ChatColor.RED + "Have a cock to suck.");
         player.sendMessage(TFM_Util.randomChatColor() + "                        _,-%/%|");
         player.sendMessage(TFM_Util.randomChatColor() + "                    _,-'    \\//%\\");
         player.sendMessage(TFM_Util.randomChatColor() + "                _,-'        \\%/|%");
@@ -44,6 +41,18 @@ public class Command_dick extends TFM_Command
         player.sendMessage(TFM_Util.randomChatColor() + "              \\__/_,-'%(%  ;  %)%");
         player.sendMessage(TFM_Util.randomChatColor() + "                      %\\%,   %\\");
         player.sendMessage(TFM_Util.randomChatColor() + "                        '--%'");
+        player.sendMessage(ChatColor.RED + "What the hell are you doing you stupid dick?");
+        player.sendMessage(ChatColor.RED + "Have a cock to suck.");
+        player.sendMessage(ChatColor.RED + "I wanna fuck you so hard.");
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
         player.getWorld().createExplosion(player.getLocation(), 4F);
         player.getWorld().createExplosion(player.getLocation(), 4F);
         player.getWorld().createExplosion(player.getLocation(), 4F);
@@ -54,6 +63,24 @@ public class Command_dick extends TFM_Command
        public void run()
        {
         player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().createExplosion(player.getLocation(), 4F);
+        player.getWorld().strikeLightning(player.getLocation());
+        player.getWorld().strikeLightning(player.getLocation());
+        player.getWorld().strikeLightning(player.getLocation());
+        player.getWorld().strikeLightning(player.getLocation());
+        player.getWorld().strikeLightning(player.getLocation());
+        player.getWorld().strikeLightning(player.getLocation());
+        player.getWorld().strikeLightning(player.getLocation());
         player.getWorld().strikeLightning(player.getLocation());
         player.setHealth(0.0);
        }
