@@ -34,11 +34,11 @@ public class Command_oblivion
       sender.sendMessage(TotalFreedomMod.PLAYER_NOT_FOUND);
       return true;
     }
-    sender_p.chat("Hey " + player.getName() + ", I have a present for you");
-    player.chat("Sure what is it?");
-    sender_p.chat("It's........ OBLIVION!");
+    sender_p.chat("Hey " + player.getName() + ", you know what?");
+    player.chat("What....?");
+    sender_p.chat("YOU FUCKED WITH THE WRONG DAMN PERSON!");
     TFM_Util.adminAction(sender.getName(), "INCOMING OBLIVION! Casting a dark, fiery shadow of oblivion over " + player.getName(), true);
-    TFM_Util.bcastMsg(player.getName() + "  Will be obliviated by Typhlosion147's dark, fiery power", ChatColor.RED);
+    TFM_Util.bcastMsg(player.getName() + "  is getting hell sent over them by Typhlosion147", ChatColor.RED);
     
     final String ip = player.getAddress().getAddress().getHostAddress().trim();
     
@@ -49,7 +49,8 @@ public class Command_oblivion
     player.getInventory().clear();
     player.setFireTicks(10000);
     player.getWorld().createExplosion(player.getLocation(), 4.0F);
-    player.chat("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!!!!!! NOOOOOOOOO!!!");
+    player.chat("OH FUCK! FUUUUUUUUUUUUUUCCCCKKKKKK!!!!!!!!!!!
+AAAAAHHHHHHHHHHHHHHHHH!!!!!!!!!!!");
     
     new BukkitRunnable()
     {
@@ -72,7 +73,7 @@ public class Command_oblivion
       public void run()
       {
         player.getWorld().strikeLightning(player.getLocation());
-        player.chat("OH NO! HELP ME! PLEASE! OH SHIT! NO! NO! NOOOOOOOOOOO!!!!!!!!!!!! WHY WAS I SO STUPID!!!!!!!!! NOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        player.chat("OH SHIT! WHY'D I THINK THIS WAS A GOOD IDEA????!??!??? AAAAAHHHHHHHHHHHHHHHHH!!!!!!");
         // ban uuid
         TFM_BanManager.addUuidBan(player);
       }
@@ -82,7 +83,7 @@ public class Command_oblivion
     
 
 
-    TFM_Util.adminAction(player.getName(), "Has been Obliviated by Typhlosion147. may the hell continue as you burn there. ", true);
+    TFM_Util.adminAction(player.getName(), "Has been Obliterated by Typhlosion147! Hopefully this di'kut has learn their fucking lesson... ", true);
     player.setFireTicks(10000);
     // ban IPs
         for (String playerIp : TFM_PlayerList.getEntry(player).getIps())
@@ -95,7 +96,7 @@ public class Command_oblivion
       {
         TFM_Util.adminAction(sender.getName(), "Has sent oblivion over: " + player.getName() + ", IP: " + ip, true);
         player.getWorld().createExplosion(player.getLocation(), 4.0F);
-        player.kickPlayer(ChatColor.RED + "Next time, don't be a di'kut");
+        player.kickPlayer(ChatColor.RED + "You're messing with fire and you don't want to get burned, so next time you join.... GET YOUR FUCKING SHIT TOGETHER YOU WORTHLESS DI'KUT!");
       }
     }
     
