@@ -62,7 +62,7 @@ public class TFM_ServerListener implements Listener
         }
         // Colorful MOTD
 
-        String message = String.format("Welcome to AlexFreedom%s! - Fast, Free, and Fun! Running on CraftBukkit for Minecraft 1.7.10!", TFM_Util.getPlayerFromIp(ip));
+        String message = String.format("Welcome to AlexFreedom%s! | FreeOP | 24/7 | Running on CraftBukkit for Minecraft 1.7.10!", TFM_Util.getPlayerFromIp(ip));
 
         final StringBuilder motd = new StringBuilder();
 
