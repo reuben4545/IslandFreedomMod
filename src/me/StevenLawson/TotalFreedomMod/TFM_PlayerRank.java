@@ -100,11 +100,6 @@ public enum TFM_PlayerRank
             return FARAH;
         }
         
-        if (sender.getName().equals("DigitalPanda242"))
-        {
-            return HELPER;
-        }
-        
         if (sender.getName().equals("XxNicozillaxX"))
         {
             return AC;
@@ -130,12 +125,12 @@ public enum TFM_PlayerRank
             return CDEV;
         }
         
-        if (sender.getName().equals("Typhlosion147"))
+        if (sender.getName().equals("Stampy100"))
         {
-            return SYS;
+            return LSYS;
         }
         
-        if (sender.getName().equals("Stampy100"))
+        if (sender.getName().equals("DarkDoge108"))
         {
             return LSYS;
         }

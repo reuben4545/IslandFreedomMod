@@ -959,6 +959,11 @@ public class TFM_PlayerListener implements Listener
             player.setPlayerListName(ChatColor.DARK_PURPLE + player.getName());
             TFM_PlayerData.getPlayerData(player).setTag("&8[&5Developer&8]");
         }
+        if (TFM_Util.SPECIAL_EXECS.contains(player.getName()))
+        {
+        player.setPlayerListName(ChatColor.YELLOW + player.getName());
+        TFM_PlayerData.getPlayerData(player).setTag("&8[&eSpecial-Exec&8]");
+        }
         if (TFM_Util.WEBDEV.contains(player.getName()))
         {
             player.setPlayerListName(ChatColor.GOLD + player.getName());
@@ -984,11 +989,6 @@ public class TFM_PlayerListener implements Listener
             player.setPlayerListName(ChatColor.AQUA + player.getName());
             TFM_PlayerData.getPlayerData(player).setTag("&8[&BSuper Admin&8]");
         }
-        else if (TFM_Util.SPECIAL_EXECS.contains(player.getName()))
-        {
-        player.setPlayerListName(ChatColor.YELLOW + player.getName());
-        TFM_PlayerData.getPlayerData(player).setTag("&8[&cSpecial-Exec&8]");
-        }
          if (username.equalsIgnoreCase("_herobrian35_"))
         {
             player.setPlayerListName(ChatColor.RED + "hero" + ChatColor.DARK_RED + "brian");
@@ -1011,8 +1011,8 @@ public class TFM_PlayerListener implements Listener
         }
         else if (username.equalsIgnoreCase("DF_Crafted"))
         {
-            player.setPlayerListName(ChatColor.DARK_RED + player.getName());
-            TFM_PlayerData.getPlayerData(player).setTag("&8[&4Sys-Admin&8]");
+            player.setPlayerListName(ChatColor.GRAY + player.getName());
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&7Suspended&8]");
         }
         else if (username.equalsIgnoreCase("Stampy100") && username.equalsIgnoreCase("DarkDoge108"))
         {
