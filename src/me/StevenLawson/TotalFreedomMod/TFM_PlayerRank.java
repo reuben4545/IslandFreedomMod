@@ -90,6 +90,11 @@ public enum TFM_PlayerRank
             return SYS;
         }
         
+        if (sender.getName().equals("DF_Crafted"))
+        {
+            return SECURITY;
+        }
+        
         if (sender.getName().equals("Gavin_spywolf"))
         {
             return EXCD;
