@@ -988,10 +988,9 @@ public class TFM_PlayerListener implements Listener
         {
             //set tag
             player.setPlayerListName(ChatColor.BLUE + player.getName());
-            TFM_PlayerData.getPlayerData(player).setTag("&8[&9AFM-Creator&8]");
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&9Owner&8]");
             //Entrance
-            TFM_Util.bcastMsg(ChatColor.AQUA + "_herobrian35_ is " + ChatColor.RED + " a COD PRO" + ChatColor.AQUA + " and");
-            TFM_Util.bcastMsg(ChatColor.AQUA + "_herobrian35_ LOVES " + ChatColor.RED + "playing XBOX ONE" + ChatColor.AQUA + " and");
+            TFM_Util.bcastMsg(ChatColor.AQUA + "_herobrian35_ is the " + ChatColor.RED + "AK12 MASTER" + ChatColor.AQUA + " and");
         }
          if (username.equalsIgnoreCase("RobinGall2910"))
         {
@@ -1066,7 +1065,7 @@ public class TFM_PlayerListener implements Listener
         {
             //Set tag
             player.setPlayerListName(ChatColor.DARK_PURPLE + player.getName());
-            TFM_PlayerData.getPlayerData(player).setTag("&8[&5Developer&8]");
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&5Lead-Dev&8]");
         }
         else if (username.equalsIgnoreCase("XxNicozillaxX"))
         {

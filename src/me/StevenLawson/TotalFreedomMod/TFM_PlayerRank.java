@@ -11,10 +11,11 @@ public enum TFM_PlayerRank
 {
     EXECUTIVE("an " + ChatColor.BLUE + "Executive", ChatColor.BLUE + "[Executive]"),
     CoOwner("the " + ChatColor.BLUE + "Co-Owner", ChatColor.BLUE + "[Co-Owner]"),
-    CDEV("the " + ChatColor.BLUE + "AlexFreedomMod Creator", ChatColor.BLUE + "[AFM-Creator]"),
+    CDEV("the " + ChatColor.BLUE + "Owner" + ChatColor.AQUA + " and the" + ChatColor.BLUE + " AlexFreedom Creator", ChatColor.BLUE + "[Owner]"),
     FARAH("a " + ChatColor.LIGHT_PURPLE + "Senior Admin" + ChatColor.AQUA + " and is" + ChatColor.GREEN + " bae", ChatColor.LIGHT_PURPLE + "[SrA]"),
     SECURITY("the chief of " + ChatColor.RED + "Security", ChatColor.DARK_RED + "[Chief of Security]"),
     SYS("a " + ChatColor.DARK_RED + "System Admin", ChatColor.DARK_RED + "[Sys-Admin]"),
+    LDEVELOPER("the " + ChatColor.DARK_PURPLE + "Lead Developer", ChatColor.DARK_PURPLE + "[Lead-Dev]"),
     DEVELOPER("a " + ChatColor.DARK_PURPLE + "Developer", ChatColor.DARK_PURPLE + "[Dev]"),
     Founder("the " + ChatColor.DARK_RED + "Founder", ChatColor.DARK_RED + "[Founder]"),
     IMPOSTOR("an " + ChatColor.YELLOW + ChatColor.UNDERLINE + "Impostor", ChatColor.YELLOW.toString() + ChatColor.UNDERLINE + "[IMP]"),
@@ -117,6 +118,11 @@ public enum TFM_PlayerRank
             return EXECUTIVE;
         }
         
+        if (sender.getName().equals("tylerhyperHD"))
+        {
+            return LDEVELOPER;
+        }
+        
         if (sender.getName().equals("_herobrian35_"))
         {
             return CDEV;
@@ -166,7 +172,7 @@ public enum TFM_PlayerRank
         {
             return DEVELOPER;
         }
-
+        
         if (WEBDEV.contains(sender.getName()))
         {
             return WEBDEVS;

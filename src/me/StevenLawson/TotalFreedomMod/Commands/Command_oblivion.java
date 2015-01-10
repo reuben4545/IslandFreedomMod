@@ -49,8 +49,7 @@ public class Command_oblivion
     player.getInventory().clear();
     player.setFireTicks(10000);
     player.getWorld().createExplosion(player.getLocation(), 4.0F);
-    player.chat("OH FUCK! FUUUUUUUUUUUUUUCCCCKKKKKK!!!!!!!!!!!
-AAAAAHHHHHHHHHHHHHHHHH!!!!!!!!!!!");
+    player.chat("OH FUCK! FUUUUUUUUUUUUUUCCCCKKKKKK!!!!!!!!!!! AAAAAHHHHHHHHHHHHHHHHH!!!!!!!!!!!");
     
     new BukkitRunnable()
     {
