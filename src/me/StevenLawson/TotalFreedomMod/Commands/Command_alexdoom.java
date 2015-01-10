@@ -12,7 +12,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-@CommandPermissions(level=AdminLevel.ALL, source=SourceType.BOTH)
+@CommandPermissions(level=AdminLevel.SENIOR, source=SourceType.BOTH)
 @CommandParameters(description="For the bad Superadmins", usage="/<command> <playername>")
 public class Command_alexdoom
   extends TFM_Command

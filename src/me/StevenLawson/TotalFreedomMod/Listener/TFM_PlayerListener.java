@@ -984,10 +984,16 @@ public class TFM_PlayerListener implements Listener
             player.setPlayerListName(ChatColor.AQUA + player.getName());
             TFM_PlayerData.getPlayerData(player).setTag("&8[&BSuper Admin&8]");
         }
+        else if (TFM_Util.SPECIAL_EXECS.contains(player.getName()))
+        {
+        player.setPlayerListName(ChatColor.YELLOW + player.getName());
+        TFM_PlayerData.getPlayerData(player).setTag("&8[&cSpecial-Exec&8]");
+        }
          if (username.equalsIgnoreCase("_herobrian35_"))
         {
-            //set tag
-            player.setPlayerListName(ChatColor.BLUE + player.getName());
+            player.setPlayerListName(ChatColor.RED + "hero" + ChatColor.DARK_RED + "brian");
+            player.setDisplayName("herobrian");
+            TFM_EssentialsBridge.setNickname(player.getName(), ChatColor.RED + "hero" + ChatColor.DARK_RED + "brian");
             TFM_PlayerData.getPlayerData(player).setTag("&8[&9Owner&8]");
             //Entrance
             TFM_Util.bcastMsg(ChatColor.AQUA + "_herobrian35_ is the " + ChatColor.RED + "AK12 MASTER" + ChatColor.AQUA + " and");
@@ -1008,7 +1014,7 @@ public class TFM_PlayerListener implements Listener
             player.setPlayerListName(ChatColor.DARK_RED + player.getName());
             TFM_PlayerData.getPlayerData(player).setTag("&8[&4Sys-Admin&8]");
         }
-        else if (username.equalsIgnoreCase("Stampy100"))
+        else if (username.equalsIgnoreCase("Stampy100") && username.equalsIgnoreCase("DarkDoge108"))
         {
             player.setPlayerListName(ChatColor.RED + "Doge");
             player.setDisplayName("Doge");
@@ -1017,13 +1023,13 @@ public class TFM_PlayerListener implements Listener
             player.setPlayerListName(ChatColor.DARK_RED + player.getName());
             TFM_PlayerData.getPlayerData(player).setTag("&8[&4Lead Sys-Admin&8]");
             //Entrance
-            TFM_Util.bcastMsg(ChatColor.GOLD + "Stampy100 " + ChatColor.DARK_GREEN + "is a Doge aminitronic " + ChatColor.AQUA + "and..");
+            TFM_Util.bcastMsg(ChatColor.GOLD + "DarkDoge108 " + ChatColor.DARK_GREEN + "is a Doge aminitronic " + ChatColor.AQUA + "and..");
             TFM_Util.bcastMsg(ChatColor.RED + "is the BOSS at FNAF 2");
         }
-        else if (username.equalsIgnoreCase("ttt"))
+        else if (username.equalsIgnoreCase("Typhlosion147"))
         {
-            //Entrance
-            TFM_Util.bcastMsg(ChatColor.AQUA + "ttt is a " + ChatColor.GOLD + "Boss at Advanced Warfare" + ChatColor.AQUA + "and.. ");
+            player.setPlayerListName(ChatColor.YELLOW + player.getName());
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&cSpecial-Exec&8]");
         }
         else if (username.equalsIgnoreCase("Alex33856"))
         {
@@ -1031,7 +1037,7 @@ public class TFM_PlayerListener implements Listener
             player.setDisplayName("Alex");
             TFM_EssentialsBridge.setNickname(player.getName(), ChatColor.GREEN + "Al" + ChatColor.DARK_GREEN + "ex");
             //Set tag
-            TFM_PlayerData.getPlayerData(player).setTag("&8[&4Founder&8]");
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&7Suspended&8]");
         }
         else if (username.equalsIgnoreCase("zthehorsekid"))
         {

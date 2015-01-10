@@ -3,6 +3,7 @@ package me.StevenLawson.TotalFreedomMod;
 import me.StevenLawson.TotalFreedomMod.Config.TFM_ConfigEntry;
 import static me.StevenLawson.TotalFreedomMod.TFM_Util.DEVELOPERS;
 import static me.StevenLawson.TotalFreedomMod.TFM_Util.WEBDEV;
+import static me.StevenLawson.TotalFreedomMod.TFM_Util.SPECIAL_EXECS;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -17,7 +18,7 @@ public enum TFM_PlayerRank
     SYS("a " + ChatColor.DARK_RED + "System Admin", ChatColor.DARK_RED + "[Sys-Admin]"),
     LDEVELOPER("the " + ChatColor.DARK_PURPLE + "Lead Developer", ChatColor.DARK_PURPLE + "[Lead-Dev]"),
     DEVELOPER("a " + ChatColor.DARK_PURPLE + "Developer", ChatColor.DARK_PURPLE + "[Dev]"),
-    Founder("the " + ChatColor.DARK_RED + "Founder", ChatColor.DARK_RED + "[Founder]"),
+    Founder("the " + ChatColor.DARK_RED + "Founder of Suspension", ChatColor.DARK_RED + "[Suspended]"),
     IMPOSTOR("an " + ChatColor.YELLOW + ChatColor.UNDERLINE + "Impostor", ChatColor.YELLOW.toString() + ChatColor.UNDERLINE + "[IMP]"),
     NON_OP("a " + ChatColor.GREEN + "Non-OP", ChatColor.GREEN.toString()),
     OP("an " + ChatColor.RED + "OP", ChatColor.RED + "[OP]"),
@@ -28,6 +29,7 @@ public enum TFM_PlayerRank
     CONSOLE("The " + ChatColor.DARK_PURPLE + "Console", ChatColor.DARK_PURPLE + "[Console]"),
     WEBDEVS("a " + ChatColor.RED + "Web Developer", ChatColor.DARK_RED + "[Web-Dev]"),
     HELPER("a " + ChatColor.RED + "Helper", ChatColor.RED + "[Helper]"),
+    SPEC_EXEC("a " + ChatColor.YELLOW + "Special Executive", ChatColor.YELLOW + "[Spec-Exec]"),
     MAN("the " + ChatColor.DARK_RED + "Admin Manager", ChatColor.DARK_RED + "[Admin Manager]"),
     SRA("a " + ChatColor.LIGHT_PURPLE + "Senior Helper", ChatColor.LIGHT_PURPLE + "[Senior-Helper]"),
     EXCD("the " + ChatColor.BLUE + "Executive Chief Designer", ChatColor.BLUE + "[Executive Chief]"),
@@ -171,6 +173,11 @@ public enum TFM_PlayerRank
         if (DEVELOPERS.contains(sender.getName()))
         {
             return DEVELOPER;
+        }
+        
+        else if (SPECIAL_EXECS.contains(sender.getName()))
+        {
+            return SPEC_EXEC;
         }
         
         if (WEBDEV.contains(sender.getName()))
