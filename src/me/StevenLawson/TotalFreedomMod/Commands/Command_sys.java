@@ -16,7 +16,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
-@CommandParameters(description = "System Administration Management", usage = "/<command> [saadd | sadelete] <username> [kick] <<username>> <<reason>>]")
+@CommandParameters(description = "System Administration Management", usage = "/<command> [saadd | sadelete] <username> [kick] [gtfo] <<username>> <<reason>>]", aliases = "system")
 public class Command_sys extends TFM_Command
 {
     private Object reason;

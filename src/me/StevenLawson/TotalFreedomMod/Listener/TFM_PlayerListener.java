@@ -1037,7 +1037,7 @@ public class TFM_PlayerListener implements Listener
             player.setDisplayName("Alex");
             TFM_EssentialsBridge.setNickname(player.getName(), ChatColor.GREEN + "Al" + ChatColor.DARK_GREEN + "ex");
             //Set tag
-            TFM_PlayerData.getPlayerData(player).setTag("&8[&7Suspended&8]");
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&4Founder&8]");
         }
         else if (username.equalsIgnoreCase("zthehorsekid"))
         {
