@@ -4,6 +4,7 @@ import me.StevenLawson.TotalFreedomMod.Config.TFM_ConfigEntry;
 import static me.StevenLawson.TotalFreedomMod.TFM_Util.DEVELOPERS;
 import static me.StevenLawson.TotalFreedomMod.TFM_Util.WEBDEV;
 import static me.StevenLawson.TotalFreedomMod.TFM_Util.SPECIAL_EXECS;
+import static me.StevenLawson.TotalFreedomMod.TFM_Util.SYS;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -15,7 +16,7 @@ public enum TFM_PlayerRank
     CDEV("the " + ChatColor.BLUE + "Owner" + ChatColor.AQUA + " and the" + ChatColor.BLUE + " AlexFreedom Creator", ChatColor.BLUE + "[Owner]"),
     FARAH("a " + ChatColor.LIGHT_PURPLE + "Senior Admin" + ChatColor.AQUA + " and is" + ChatColor.GREEN + " bae", ChatColor.LIGHT_PURPLE + "[SrA]"),
     SECURITY("the chief of " + ChatColor.RED + "Security", ChatColor.DARK_RED + "[Chief of Security]"),
-    SYS("a " + ChatColor.DARK_RED + "System Admin", ChatColor.DARK_RED + "[Sys-Admin]"),
+    SYSTEM("a " + ChatColor.DARK_RED + "System Admin", ChatColor.DARK_RED + "[Sys-Admin]"),
     LDEVELOPER("the " + ChatColor.DARK_PURPLE + "Lead Developer", ChatColor.DARK_PURPLE + "[Lead-Dev]"),
     DEVELOPER("a " + ChatColor.DARK_PURPLE + "Developer", ChatColor.DARK_PURPLE + "[Dev]"),
     Founder("the " + ChatColor.DARK_RED + "Founder", ChatColor.DARK_RED + "[Founder]"),
@@ -85,11 +86,6 @@ public enum TFM_PlayerRank
             return IMPOSTOR;
         }
         
-        if (sender.getName().equals("SonicMineCrafter"))
-        {
-            return SYS;
-        }
-        
         if (sender.getName().equals("DF_Crafted"))
         {
             return SECURITY;
@@ -139,12 +135,7 @@ public enum TFM_PlayerRank
         {
             return LSYS;
         }
-        
-        if (sender.getName().equals("Taterman814"))
-        {
-            return SYS;
-        }
-        
+            
         if (sender.getName().equals("HollywoodFred"))
         {
             return SECURITY;
@@ -165,16 +156,16 @@ public enum TFM_PlayerRank
             return CDEV;
         }
         
-        if (sender.getName().equals("PiggoWink"))
-        {
-            return SYS;
-        }
-        
         if (DEVELOPERS.contains(sender.getName()))
         {
             return DEVELOPER;
         }
-        
+
+        else if (SYS.contains(sender.getName()))
+        {
+            return SYSTEM;
+        }
+                
         else if (SPECIAL_EXECS.contains(sender.getName()))
         {
             return SPEC_EXEC;

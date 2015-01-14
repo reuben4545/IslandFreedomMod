@@ -6,16 +6,22 @@ import me.StevenLawson.TotalFreedomMod.TFM_Util;
 import me.StevenLawson.TotalFreedomMod.TotalFreedomMod;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Horse;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.HorseInventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.LeatherArmorMeta;
 
 @CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
 @CommandParameters(description = "Graces the world with purple. Command that is pretty pointless unless you are tyler.", usage = "/<command>")
@@ -47,193 +53,141 @@ public class Command_purple extends TFM_Command
           for(Player player : Bukkit.getOnlinePlayers())
                 {
                     PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
-                    for (Enchantment ench : Enchantment.values())
-                    {
-                        wool.addUnsafeEnchantment(ench, 32767);
+                    ItemStack CamWool = new ItemStack(Material.WOOL, 1, (short)10);
+                    for (Enchantment ench : Enchantment.values()) {
+                     if (!ench.equals(Enchantment.DURABILITY)) {
+                        CamWool.addUnsafeEnchantment(ench, 32767);
+                      }
                     }
-                    ItemMeta meta = wool.getItemMeta();
+                    ItemMeta meta = CamWool.getItemMeta();
+                    meta.setDisplayName(ChatColor.YELLOW + "Purple Aura");
+                    Object lore = Arrays.asList(new String[] { ChatColor.BLUE + "This aura should protect", ChatColor.BLUE + "you from all possible harm." });
+                    meta.setLore((List)lore);
+                    CamWool.setItemMeta(meta);
                     World world = player.getWorld();
                     Location loc = player.getLocation();
-                    meta.setDisplayName(ChatColor.DARK_PURPLE + "The Purple Aura");
-                    List<String> lore = Arrays.asList(ChatColor.BLUE + "The aura should protect you from all possible harm.");
-                    meta.setLore(lore);
-                    wool.setItemMeta(meta);
-                    inv.setHelmet(wool);
+                    inv.setHelmet(CamWool);
                     world.strikeLightningEffect(loc);
                 }
+                for(Player player : Bukkit.getOnlinePlayers())
+                {
+                World world = player.getWorld();
+                Location loc = player.getLocation();
                 TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
-                                for(Player player : Bukkit.getOnlinePlayers())
+                world.strikeLightningEffect(loc);
+                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
+                world.strikeLightningEffect(loc);
+                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
+                world.strikeLightningEffect(loc);
+                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
+                world.strikeLightningEffect(loc);
+                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
+                world.strikeLightningEffect(loc);
+                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
+                world.strikeLightningEffect(loc);
+                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
+                world.strikeLightningEffect(loc);
+                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
+                world.strikeLightningEffect(loc);
+                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
+                world.strikeLightningEffect(loc);
+                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
+                world.strikeLightningEffect(loc);
+                }
+        for(Player player : Bukkit.getOnlinePlayers())
+                {
+                PlayerInventory inv = player.getInventory();
+                ItemStack CamBow = new ItemStack(Material.BOW, 1);
+                for (Enchantment ench : Enchantment.values()) {
+                 CamBow.addUnsafeEnchantment(ench, 32767);
+                }
+                ItemMeta meta = CamBow.getItemMeta();
+                meta.setDisplayName(ChatColor.DARK_AQUA + "The Purple Shot");
+                Object lore = Arrays.asList(new String[] { ChatColor.BLUE + "Legend has it, this bow", ChatColor.BLUE + "can only shoot purple arrows!" });
+                meta.setLore((List)lore);
+                CamBow.setItemMeta(meta);
+                inv.addItem(CamBow);
+                }
+                for(Player player : Bukkit.getOnlinePlayers())
+                {
+                PlayerInventory inv = player.getInventory();
+                ItemStack CamSword = new ItemStack(Material.GOLD_SWORD, 1);
+                for (Enchantment ench : Enchantment.values()) {
+                CamSword.addUnsafeEnchantment(ench, 32767);
+                }
+                ItemMeta meta = CamSword.getItemMeta();
+                meta.setDisplayName(ChatColor.DARK_GREEN + "The Purple Blade");
+                Object lore = Arrays.asList(new String[] { ChatColor.BLUE + "The purple has the power", ChatColor.BLUE + "to wield this legendary blade!" });
+                meta.setLore((List)lore);
+                CamSword.setItemMeta(meta);
+                inv.addItem(CamSword);
+                }
+                for(Player player : Bukkit.getOnlinePlayers())
                 {
                     PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
-                    for (Enchantment ench : Enchantment.values())
-                    {
-                        wool.addUnsafeEnchantment(ench, 32767);
+                    ItemStack CamArrow = new ItemStack(Material.ARROW, 1);
+                    for (Enchantment ench : Enchantment.values()) {
+                      CamArrow.addUnsafeEnchantment(ench, 32767);
                     }
-                    ItemMeta meta = wool.getItemMeta();
-                    World world = player.getWorld();
-                    Location loc = player.getLocation();
-                    meta.setDisplayName(ChatColor.DARK_PURPLE + "The Purple Aura");
-                    List<String> lore = Arrays.asList(ChatColor.BLUE + "The aura should protect you from all possible harm.");
-                    meta.setLore(lore);
-                    wool.setItemMeta(meta);
-                    inv.setHelmet(wool);
-                    world.strikeLightningEffect(loc);
+                ItemMeta meta = CamArrow.getItemMeta();
+                meta.setDisplayName(ChatColor.DARK_PURPLE + "Purple Arrow");
+                Object lore = Arrays.asList(new String[] { ChatColor.BLUE + "This arrow has a mysterious", ChatColor.BLUE + "purple aura around it..." });
+                meta.setLore((List)lore);
+                CamArrow.setItemMeta(meta);
+                inv.addItem(CamArrow);
                 }
-                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
-                                for(Player player : Bukkit.getOnlinePlayers())
+                for(Player player : Bukkit.getOnlinePlayers())
                 {
-                    PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
-                    for (Enchantment ench : Enchantment.values())
-                    {
-                        wool.addUnsafeEnchantment(ench, 32767);
-                    }
-                    ItemMeta meta = wool.getItemMeta();
-                    World world = player.getWorld();
-                    Location loc = player.getLocation();
-                    meta.setDisplayName(ChatColor.DARK_PURPLE + "The Purple Aura");
-                    List<String> lore = Arrays.asList(ChatColor.BLUE + "The aura should protect you from all possible harm.");
-                    meta.setLore(lore);
-                    wool.setItemMeta(meta);
-                    inv.setHelmet(wool);
-                    world.strikeLightningEffect(loc);
+                PlayerInventory inv = player.getInventory();
+                ItemStack CamChest = new ItemStack(Material.LEATHER_CHESTPLATE, 1);
+                 for (Enchantment ench : Enchantment.values()) {
+                if (!ench.equals(Enchantment.DURABILITY)) {
+                  CamChest.addUnsafeEnchantment(ench, 32767);
                 }
-                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
-                                for(Player player : Bukkit.getOnlinePlayers())
+              }
+               LeatherArmorMeta meta = (LeatherArmorMeta)CamChest.getItemMeta();
+               meta.setDisplayName(ChatColor.YELLOW + "Purple Aura");
+                 Object lore = Arrays.asList(new String[] { ChatColor.BLUE + "This aura should protect", ChatColor.BLUE + "you from all possible harm." });
+               meta.setLore((List)lore);
+               meta.setColor(Color.fromRGB(125, 20, 240));
+                CamChest.setItemMeta(meta);
+                inv.setChestplate(CamChest);
+
+                }
+        for(Player player : Bukkit.getOnlinePlayers())
                 {
-                    PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
-                    for (Enchantment ench : Enchantment.values())
-                    {
-                        wool.addUnsafeEnchantment(ench, 32767);
-                    }
-                    ItemMeta meta = wool.getItemMeta();
-                    World world = player.getWorld();
-                    Location loc = player.getLocation();
-                    meta.setDisplayName(ChatColor.DARK_PURPLE + "The Purple Aura");
-                    List<String> lore = Arrays.asList(ChatColor.BLUE + "The aura should protect you from all possible harm.");
-                    meta.setLore(lore);
-                    wool.setItemMeta(meta);
-                    inv.setHelmet(wool);
-                    world.strikeLightningEffect(loc);
+               PlayerInventory inv = player.getInventory();
+               ItemStack CamLegs = new ItemStack(Material.LEATHER_LEGGINGS, 1);
+               for (Enchantment ench : Enchantment.values()) {
+                if (!ench.equals(Enchantment.DURABILITY)) {
+                    CamLegs.addUnsafeEnchantment(ench, 32767);
+                  }
+               }
+                 LeatherArmorMeta meta = (LeatherArmorMeta)CamLegs.getItemMeta();
+                 meta.setDisplayName(ChatColor.YELLOW + "Purple Aura");
+                 Object lore = Arrays.asList(new String[] { ChatColor.BLUE + "This aura should protect", ChatColor.BLUE + "you from all possible harm." });
+                 meta.setLore((List)lore);
+                 meta.setColor(Color.fromRGB(125, 20, 240));
+                 CamLegs.setItemMeta(meta);
+                 inv.setLeggings(CamLegs);
                 }
-                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
-                                for(Player player : Bukkit.getOnlinePlayers())
+        for(Player player : Bukkit.getOnlinePlayers())
                 {
-                    PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
-                    for (Enchantment ench : Enchantment.values())
-                    {
-                        wool.addUnsafeEnchantment(ench, 32767);
-                    }
-                    ItemMeta meta = wool.getItemMeta();
-                    World world = player.getWorld();
-                    Location loc = player.getLocation();
-                    meta.setDisplayName(ChatColor.DARK_PURPLE + "The Purple Aura");
-                    List<String> lore = Arrays.asList(ChatColor.BLUE + "The aura should protect you from all possible harm.");
-                    meta.setLore(lore);
-                    wool.setItemMeta(meta);
-                    inv.setHelmet(wool);
-                    world.strikeLightningEffect(loc);
+              PlayerInventory inv = player.getInventory();
+              ItemStack CamBoots = new ItemStack(Material.LEATHER_BOOTS, 1);
+              for (Enchantment ench : Enchantment.values()) {
+                if (!ench.equals(Enchantment.DURABILITY)) {
+                     CamBoots.addUnsafeEnchantment(ench, 32767);
+                  }
                 }
-                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
-                                for(Player player : Bukkit.getOnlinePlayers())
-                {
-                    PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
-                    for (Enchantment ench : Enchantment.values())
-                    {
-                        wool.addUnsafeEnchantment(ench, 32767);
-                    }
-                    ItemMeta meta = wool.getItemMeta();
-                    World world = player.getWorld();
-                    Location loc = player.getLocation();
-                    meta.setDisplayName(ChatColor.DARK_PURPLE + "The Purple Aura");
-                    List<String> lore = Arrays.asList(ChatColor.BLUE + "The aura should protect you from all possible harm.");
-                    meta.setLore(lore);
-                    wool.setItemMeta(meta);
-                    inv.setHelmet(wool);
-                    world.strikeLightningEffect(loc);
+               LeatherArmorMeta meta = (LeatherArmorMeta)CamBoots.getItemMeta();
+                meta.setDisplayName(ChatColor.YELLOW + "Purple Aura");
+               Object lore = Arrays.asList(new String[] { ChatColor.BLUE + "This aura should protect", ChatColor.BLUE + "you from all possible harm." });
+               meta.setLore((List)lore);
+              meta.setColor(Color.fromRGB(125, 20, 240));
+                 CamBoots.setItemMeta(meta);
+                 inv.setBoots(CamBoots);
                 }
-                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
-                                for(Player player : Bukkit.getOnlinePlayers())
-                {
-                    PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
-                    for (Enchantment ench : Enchantment.values())
-                    {
-                        wool.addUnsafeEnchantment(ench, 32767);
-                    }
-                    ItemMeta meta = wool.getItemMeta();
-                    World world = player.getWorld();
-                    Location loc = player.getLocation();
-                    meta.setDisplayName(ChatColor.DARK_PURPLE + "The Purple Aura");
-                    List<String> lore = Arrays.asList(ChatColor.BLUE + "The aura should protect you from all possible harm.");
-                    meta.setLore(lore);
-                    wool.setItemMeta(meta);
-                    inv.setHelmet(wool);
-                    world.strikeLightningEffect(loc);
-                }
-                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
-                                for(Player player : Bukkit.getOnlinePlayers())
-                {
-                    PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
-                    for (Enchantment ench : Enchantment.values())
-                    {
-                        wool.addUnsafeEnchantment(ench, 32767);
-                    }
-                    ItemMeta meta = wool.getItemMeta();
-                    World world = player.getWorld();
-                    Location loc = player.getLocation();
-                    meta.setDisplayName(ChatColor.DARK_PURPLE + "The Purple Aura");
-                    List<String> lore = Arrays.asList(ChatColor.BLUE + "The aura should protect you from all possible harm.");
-                    meta.setLore(lore);
-                    wool.setItemMeta(meta);
-                    inv.setHelmet(wool);
-                    world.strikeLightningEffect(loc);
-                }
-                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
-                                for(Player player : Bukkit.getOnlinePlayers())
-                {
-                    PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
-                    for (Enchantment ench : Enchantment.values())
-                    {
-                        wool.addUnsafeEnchantment(ench, 32767);
-                    }
-                    ItemMeta meta = wool.getItemMeta();
-                    World world = player.getWorld();
-                    Location loc = player.getLocation();
-                    meta.setDisplayName(ChatColor.DARK_PURPLE + "The Purple Aura");
-                    List<String> lore = Arrays.asList(ChatColor.BLUE + "The aura should protect you from all possible harm.");
-                    meta.setLore(lore);
-                    wool.setItemMeta(meta);
-                    inv.setHelmet(wool);
-                    world.strikeLightningEffect(loc);
-                }
-                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
-                                for(Player player : Bukkit.getOnlinePlayers())
-                {
-                    PlayerInventory inv = player.getInventory();
-                    ItemStack wool = new ItemStack(Material.WOOL, 1, (short) 10);
-                    for (Enchantment ench : Enchantment.values())
-                    {
-                        wool.addUnsafeEnchantment(ench, 32767);
-                    }
-                    ItemMeta meta = wool.getItemMeta();
-                    World world = player.getWorld();
-                    Location loc = player.getLocation();
-                    meta.setDisplayName(ChatColor.DARK_PURPLE + "The Purple Aura");
-                    List<String> lore = Arrays.asList(ChatColor.BLUE + "The aura should protect you from all possible harm.");
-                    meta.setLore(lore);
-                    wool.setItemMeta(meta);
-                    inv.setHelmet(wool);
-                    world.strikeLightningEffect(loc);
-                }
-                TFM_Util.adminAction(sender_p.getName(), "Gracing the world with Purple!", false);
     }
     return true;
 }

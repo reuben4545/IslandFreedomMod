@@ -1,3 +1,4 @@
+/*
 package me.StevenLawson.TotalFreedomMod.Commands;
 
 import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
@@ -11,7 +12,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.ONLY_IN_GAME, blockHostConsole = true)
-@CommandParameters(description = "Recommend an Admin Applicant", usage = "/<command> <player>")
+@CommandParameters(description = "Recommend an Admin Applicant", usage = "/<command> <player> [message]")
 public class Command_recommend extends TFM_Command
 {
     @Override
@@ -61,4 +62,4 @@ public class Command_recommend extends TFM_Command
 
         return true;
     }
-}
+}*/

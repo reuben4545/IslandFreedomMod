@@ -21,11 +21,11 @@ public class Command_requestop extends TFM_Command
     {
         sender.sendMessage(ChatColor.GREEN + "You've just sent your request for op! An admin will op you soon.");
 
-        for (Player p : Bukkit.getOnlinePlayers())
-        {
-            if (TFM_AdminList.isSuperAdmin(p))
+            for(Player player : Bukkit.getOnlinePlayers())
+                {
+            if (TFM_AdminList.isSuperAdmin(player))
             {
-                p.sendMessage("§f[§bAdminChat§f] §4CONSOLE §5[Console]§f: " + ChatColor.YELLOW + player.getName() + " needs to opped ");
+                player.sendMessage("§e[§bAdminChat§e] §4CONSOLE §5[Console]§f: " + ChatColor.YELLOW + sender_p.getName() + " needs to opped ");
             }
         }
 
