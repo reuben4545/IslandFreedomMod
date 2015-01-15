@@ -22,6 +22,7 @@ package me.StevenLawson.TotalFreedomMod.Commands;
 */
 
 import me.StevenLawson.TotalFreedomMod.Commands.*;
+import me.StevenLawson.TotalFreedomMod.Config.TFM_ConfigEntry;
 import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
 import me.StevenLawson.TotalFreedomMod.TFM_Util;
 import me.StevenLawson.TotalFreedomMod.TFM_Util;
@@ -35,21 +36,26 @@ import static sun.audio.AudioPlayer.player;
 
 @CommandPermissions(level = AdminLevel.ALL, source = SourceType.ONLY_IN_GAME)
 @CommandParameters(description = "Request op", usage = "/<command>", aliases = "canihaveop")
-public class Command_requestop extends TFM_Command
+public class Command_question extends TFM_Command
 {
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-        sender.sendMessage(ChatColor.GREEN + "You've just sent your request for op! An admin will op you soon.");
+    if (TFM_ConfigEntry.ADMIN_ONLY_MODE.getBoolean().booleanValue() && TFM_ConfigEntry.TRAINING_SESSION.getBoolean().booleanValue())
+     {
+        sender.sendMessage(ChatColor.GREEN + "You've requested to talk during a meeting. We will give u access shortly.");
 
             for(Player player : Bukkit.getOnlinePlayers())
                 {
-            if (TFM_AdminList.isSuperAdmin(player))
+            if (TFM_Util.isHighRank(player))
             {
-                player.sendMessage("§e[§bAdminChat§e] §4CONSOLE §5[Console]§f: " + ChatColor.YELLOW + sender_p.getName() + " needs to opped ");
+                player.sendMessage("§e[§bAdminChat§e] §4CONSOLE §5[Console]§f: " + ChatColor.YELLOW + sender_p.getName() + " has requested to talk.");
             }
         }
-
+     }
+    else {
+        sender_p.sendMessage(ChatColor.RED + "The question command is not available unless a quiz is active!");
+    }
         return true;
     }
 }

@@ -85,6 +85,20 @@ public class TotalFreedomMod extends JavaPlugin
     {
         TFM_Log.info("Made by tylerhyperHD, Madgeek1450, and DarthSalamon");
         TFM_Log.info("Compiled " + buildDate + " by " + buildCreator);
+        TFM_Log.info("  ____                 _                              _     _             ");
+        TFM_Log.info(" |  _ \\    ___   ___  (_)   __ _   _ __     ___    __| |   | |__    _   _ ");
+        TFM_Log.info(" | | | |  / _ \\ / __| | |  / _` | | '_ \\   / _ \\  / _` |   | '_ \\  | | | |");
+        TFM_Log.info(" | |_| | |  __/ \\__ \\ | | | (_| | | | | | |  __/ | (_| |   | |_) | | |_| |");
+        TFM_Log.info(" |____/   \\___| |___/ |_|  \\__, | |_| |_|  \\___|  \\__,_|   |_.__/   \\__, |");
+        TFM_Log.info("                           |___/                                    |___/ ");
+        TFM_Log.info("");  
+        TFM_Log.info("  _             _                 _                                     _   _   ____  ");
+        TFM_Log.info(" | |_   _   _  | |   ___   _ __  | |__    _   _   _ __     ___   _ __  | | | | |  _ \\ ");  
+        TFM_Log.info(" | __| | | | | | |  / _ \\ | '__| | '_ \\  | | | | | '_ \\   / _ \\ | '__| | |_| | | | | |");  
+        TFM_Log.info(" | |_  | |_| | | | |  __/ | |    | | | | | |_| | | |_) | |  __/ | |    |  _  | | |_| |");  
+        TFM_Log.info("  \\__|  \\__, | |_|  \\___| |_|    |_| |_|  \\__, | | .__/   \\___| |_|    |_| |_| |____/ ");  
+        TFM_Log.info("        |___/                             |___/  |_|                                  ");  
+        TFM_Log.info("");  
         TFM_Log.info("/***********************/");
         TFM_Log.info("");
         TFM_Log.info("Made for AlexFreedom - An all-op server");
@@ -92,6 +106,7 @@ public class TotalFreedomMod extends JavaPlugin
         TFM_Log.info("");
         TFM_Log.info("/***********************/");
 
+        
         if (!TFM_ServerInterface.COMPILE_NMS_VERSION.equals(TFM_Util.getNmsVersion()))
         {
             TFM_Log.warning(pluginName + " is compiled for " + TFM_ServerInterface.COMPILE_NMS_VERSION + " but the server is running "

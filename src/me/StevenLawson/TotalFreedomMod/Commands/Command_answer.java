@@ -21,31 +21,34 @@ package me.StevenLawson.TotalFreedomMod.Commands;
 
 */
 
-import me.StevenLawson.TotalFreedomMod.Commands.*;
+import me.StevenLawson.TotalFreedomMod.Config.TFM_ConfigEntry;
 import me.StevenLawson.TotalFreedomMod.TFM_Util;
-import me.StevenLawson.TotalFreedomMod.TFM_Util;
-import org.bukkit.Bukkit;
+import net.minecraft.util.org.apache.commons.lang3.StringUtils;
 import org.bukkit.ChatColor;
-import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-@CommandPermissions(level = AdminLevel.ALL, source = SourceType.ONLY_IN_GAME)
-@CommandParameters(description = "To fuck with the stupid ones.", usage = "/<command> [-f]")
-public class Command_handjob extends TFM_Command
+@CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.BOTH)
+@CommandParameters(description = "Allows seniors to tell the answer to everyone.", usage = "/<command> <message>")
+public class Command_answer extends TFM_Command
 {
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-        TFM_Util.bcastMsg(sender.getName() +  String.format(" fucked himself too hard.", args.length == 1 ? " fiery" : ""), ChatColor.RED);
-        sender_p.setGameMode(GameMode.SURVIVAL);
-        sender_p.getWorld().createExplosion(sender_p.getLocation().getBlockX(), sender_p.getLocation().getBlockY(), sender_p.getLocation().getBlockZ(), 0, false, false);
-        if(args.length == 1 && TFM_Util.isHighRank(sender_p))
+            if (TFM_ConfigEntry.ADMIN_ONLY_MODE.getBoolean().booleanValue() && TFM_ConfigEntry.TRAINING_SESSION.getBoolean().booleanValue())
+     {
+            if (args.length == 0)
         {
-            Bukkit.dispatchCommand(sender_p, "fireball");
+            return false;
         }
-        sender_p.setHealth(0);
+            String message = StringUtils.join(args, " ");
+            TFM_Util.bcastMsg(String.format(ChatColor.LIGHT_PURPLE + "[ANSWER:%s] %s", sender.getName(), ChatColor.GREEN + message));
+            return true;
+     }
+            else {
+               sender_p.sendMessage(ChatColor.RED + "The server must be in TRAINING or ADMIN mode to use this command.");
+            }
         return true;
     }
 }

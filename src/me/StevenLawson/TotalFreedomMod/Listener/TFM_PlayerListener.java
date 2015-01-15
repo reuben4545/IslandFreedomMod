@@ -612,7 +612,7 @@ public class TFM_PlayerListener implements Listener
             // Check for muted
             if (playerdata.isMuted())
             {
-                if (!TFM_AdminList.isSuperAdmin(player))
+                if (!TFM_Util.isHighRank(player))
                 {
                     player.sendMessage(ChatColor.RED + "You are muted, STFU!");
                     event.setCancelled(true);
