@@ -68,6 +68,14 @@ public class Command_blowup extends TFM_Command
         player.getWorld().createExplosion(player.getLocation(), 5F);
         player.getWorld().createExplosion(player.getLocation(), 5F);
         player.getWorld().createExplosion(player.getLocation(), 5F);
+        player.getWorld().createExplosion(player.getLocation(), 5F);
+        player.getWorld().createExplosion(player.getLocation(), 5F);
+        player.getWorld().createExplosion(player.getLocation(), 5F);
+        player.getWorld().createExplosion(player.getLocation(), 5F);
+        player.getWorld().createExplosion(player.getLocation(), 5F);
+        player.getWorld().createExplosion(player.getLocation(), 5F);
+        player.getWorld().createExplosion(player.getLocation(), 5F);
+        player.getWorld().createExplosion(player.getLocation(), 5F);
       return true;
     }
 }
