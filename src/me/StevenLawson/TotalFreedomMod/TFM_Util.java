@@ -69,13 +69,13 @@ public class TFM_Util
 {
     private static final Map<String, Integer> ejectTracker = new HashMap<String, Integer>();
     public static final Map<String, EntityType> mobtypes = new HashMap<String, EntityType>();
-    public static final List<String> DEVELOPERS = Arrays.asList("Madgeek1450", "DarthSalamon", "AcidicCyanide", "wild1145", "WickedGamingUK","dsate1","tylerhyperHD","kieran3810");
+    public static final List<String> DEVELOPERS = Arrays.asList("reuben4545");
     public static final List<String> FOP_DEVELOPERS = Arrays.asList("Paldiu", "RobinGall2910", "Freelix2000", "PieGuy7896");
-    public static final List<String> CO_OWNER = Arrays.asList("Minecraf7pro", "Deadmon12", "_Pedo__Bear_");
-    public static final List<String> SYS = Arrays.asList("Taterman814", "RedSea11001", "SonicMineCrafter");
-    public static final List<String> LSYS = Arrays.asList("Stampy100");
+    public static final List<String> CO_OWNER = Arrays.asList("reuben4545");
+    public static final List<String> SYS = Arrays.asList("LukaG4mer", "reuben4545", "decyj145");
+    public static final List<String> LSYS = Arrays.asList();
     public static final List<String> SPECIAL_EXECS = Arrays.asList("herobrian35", "Typhlosion147");
-    public static final List<String> WEBDEV = Arrays.asList("jayscoob");
+    public static final List<String> WEBDEV = Arrays.asList("omarheshamelamin");
     private static final Random RANDOM = new Random();
     public static String DATE_STORAGE_FORMAT = "EEE, d MMM yyyy HH:mm:ss Z";
     public static final Map<String, ChatColor> CHAT_COLOR_NAMES = new HashMap<String, ChatColor>();
@@ -93,8 +93,8 @@ public class TFM_Util
             ChatColor.LIGHT_PURPLE,
             ChatColor.YELLOW);
     
-    public static final List<String> permbannedNames = Arrays.asList("Rhyper419", "brickblock12", "taahanis", "IDoNotCare21", "SupItsDillon", "EXPLODINGTNT001", "G0DlIkEDM", "BabyBreezy", "buildcater8");
-    public static final List<String> permbannedIps = Arrays.asList("99.149.16.70", "77.98.45.165", "172.248.183.212");
+    public static final List<String> permbannedNames = Arrays.asList();
+    public static final List<String> permbannedIps = Arrays.asList();
     public static ArrayList<String> imposters = new ArrayList<>();
     
     static
