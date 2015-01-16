@@ -31,14 +31,13 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 @CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.BOTH)
-@CommandParameters(description = "Mutes a player with brute force.", usage = "/<command> [<player> [-s] | list | purge | all]", aliases = "mute")
+@CommandParameters(description = "Mutes a player with brute force.", usage = "/<command> [<player> | all | purge |list]")
 public class Command_quiz extends TFM_Command
 {
 
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-
         if (!TFM_Util.SYS.contains(sender.getName()) && !sender.getName().equals("RobinGall2910") && !sender.getName().equals("tylerhyperHD") && !sender.getName().equals("_herobrian35_") && !sender.getName().equals("Alex33856") && !sender.getName().equals("dsate1") && !sender.getName().equals("kieran3810") && !sender.getName().equals("Stampy100") && !sender.getName().equals("robotexplorer"))
         {
             sender.sendMessage(TotalFreedomMod.MSG_NO_PERMS);
@@ -55,17 +54,11 @@ public class Command_quiz extends TFM_Command
             return true;
         }
 
-        if (args.length == 0)
-        {
-            return false;
-        }
-        else if (args.length == 1)
+        if (args.length == 0 || args.length > 2)
         {
             return false;
         }
 
-        else if (args.length == 2)
-        {
         if (args[0].equalsIgnoreCase("list"))
         {
             playerMsg("Muted players:");
@@ -87,9 +80,9 @@ public class Command_quiz extends TFM_Command
         }
         else
         {
-            if (args[0].equalsIgnoreCase("off"))
+            if (args[0].equalsIgnoreCase("purge"))
             {
-                TFM_Util.adminAction(sender.getName(), "Stopping the admin quiz", true);
+                TFM_Util.adminAction(sender.getName(), "Unmuting all players.", true);
                 TFM_PlayerData info;
                 int count = 0;
                 for (Player mp : server.getOnlinePlayers())
@@ -109,9 +102,9 @@ public class Command_quiz extends TFM_Command
             }
             else
             {
-                if (args[0].equalsIgnoreCase("on"))
+                if (args[0].equalsIgnoreCase("all"))
                 {
-                    TFM_Util.adminAction(sender.getName(), "Starting the admin quiz", true);
+                    TFM_Util.adminAction(sender.getName(), "Muting all senior admins and below", true);
 
                     TFM_PlayerData playerdata;
                     int counter = 0;
@@ -178,12 +171,11 @@ public class Command_quiz extends TFM_Command
                         }
                         else
                         {
-                            playerMsg(player.getName() + " is a high rank, and can't be muted.");
+                            playerMsg(player.getName() + " is a superadmin, and can't be muted.");
                         }
                     }
                 }
             }
-        }
         }
         return true;
     }

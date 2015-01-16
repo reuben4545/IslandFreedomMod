@@ -714,7 +714,7 @@ public class TFM_PlayerListener implements Listener
         // Block commands if player is muted
         if (playerdata.isMuted())
         {
-            if (!TFM_AdminList.isSuperAdmin(player))
+            if (!TFM_Util.isHighRank(player))
             {
                 for (String commandName : BLOCKED_MUTED_CMDS)
                 {

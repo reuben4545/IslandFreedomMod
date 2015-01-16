@@ -32,7 +32,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = AdminLevel.ALL, source = SourceType.ONLY_IN_GAME)
-@CommandParameters(description = "To fuck with the stupid ones.", usage = "/<command> [-f]")
+@CommandParameters(description = "To fuck with the stupid ones.", usage = "/<command>", aliases = "fap")
 public class Command_handjob extends TFM_Command
 {
     @Override

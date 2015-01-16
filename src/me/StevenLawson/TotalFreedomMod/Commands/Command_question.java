@@ -35,7 +35,7 @@ import org.bukkit.entity.Player;
 import static sun.audio.AudioPlayer.player;
 
 @CommandPermissions(level = AdminLevel.ALL, source = SourceType.ONLY_IN_GAME)
-@CommandParameters(description = "Request op", usage = "/<command>", aliases = "canihaveop")
+@CommandParameters(description = "Ask something to the admins.", usage = "/<command>")
 public class Command_question extends TFM_Command
 {
     @Override

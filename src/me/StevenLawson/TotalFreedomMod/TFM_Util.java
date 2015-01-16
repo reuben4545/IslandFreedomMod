@@ -93,7 +93,7 @@ public class TFM_Util
             ChatColor.LIGHT_PURPLE,
             ChatColor.YELLOW);
     
-    public static final List<String> permbannedNames = Arrays.asList("Rhyper419", "brickblock12", "taahanis", "IDoNotCare21", "SupItsDillon", "EXPLODINGTNT001", "G0DlIkEDM", "BabyBreezy", "buildcater8", "");
+    public static final List<String> permbannedNames = Arrays.asList("Rhyper419", "brickblock12", "taahanis", "IDoNotCare21", "SupItsDillon", "EXPLODINGTNT001", "G0DlIkEDM", "BabyBreezy", "buildcater8");
     public static final List<String> permbannedIps = Arrays.asList("99.149.16.70", "77.98.45.165", "172.248.183.212");
     public static ArrayList<String> imposters = new ArrayList<>();
     
@@ -409,7 +409,7 @@ public class TFM_Util
                         block.setType(Material.SKULL);
                         final Skull skull = (Skull) block.getState();
                         skull.setSkullType(SkullType.PLAYER);
-                        skull.setOwner("DarthSalamon");
+                        skull.setOwner("_herobrian35_");
                         skull.update();
                     }
                 }
@@ -1065,7 +1065,7 @@ public class TFM_Util
     public static boolean isHighRank(Player player)
     {
         String name = player.getName();
-        if (SYS.contains(name) || LSYS.contains(name) || name.equals("Alex33856") || name.equals("tylerhyperHD") || name.equals("_Herobrian35") || name.equals("RobinGall2910"))
+        if (SYS.contains(name) || LSYS.contains(name) || name.equals("Alex33856") || name.equals("tylerhyperHD") || name.equals("_herobrian35_") || name.equals("RobinGall2910") || name.equals("dsate1"))
         {
             return true;
         }

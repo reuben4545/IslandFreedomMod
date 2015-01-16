@@ -106,9 +106,17 @@ public class Command_adminworld extends TFM_Command
                         }
                         else if ("purge".equalsIgnoreCase(args[1]))
                         {
+                        if (TFM_AdminList.isSeniorAdmin(sender))
+                        {
                             assertCommandPerms(sender, sender_p);
                             TFM_AdminWorld.getInstance().purgeGuestList();
                             TFM_Util.adminAction(sender.getName(), "AdminWorld guest list purged.", false);
+                        }
+                        else
+                        {
+                            sender_p.sendMessage("Only Seniors and above may do this!");
+                            return false;
+                        }
                         }
                         else
                         {
@@ -120,6 +128,8 @@ public class Command_adminworld extends TFM_Command
                         assertCommandPerms(sender, sender_p);
 
                         if ("add".equalsIgnoreCase(args[1]))
+                        {
+                       if (TFM_AdminList.isSeniorAdmin(sender))
                         {
                             final Player player = getPlayer(args[2]);
 
@@ -138,8 +148,14 @@ public class Command_adminworld extends TFM_Command
                                 playerMsg("Could not add player to guest list.");
                             }
                         }
+                       else {
+                            sender_p.sendMessage("Only a SENIOR admin and above may add guests!");
+                        }
+                        }
                         else if ("remove".equals(args[1]))
                         {
+                            if (TFM_AdminList.isSeniorAdmin(sender))
+                            {
                             final Player player = TFM_AdminWorld.getInstance().removeGuest(args[2]);
                             if (player != null)
                             {
@@ -147,6 +163,7 @@ public class Command_adminworld extends TFM_Command
                             }
                             else
                             {
+                                sender_p.sendMessage("Only a SENIOR admin and above may add or remove guests!");
                                 playerMsg("Can't find guest entry for: " + args[2]);
                             }
                         }
@@ -154,6 +171,7 @@ public class Command_adminworld extends TFM_Command
                         {
                             return false;
                         }
+                    }
                     }
 
                     break;
