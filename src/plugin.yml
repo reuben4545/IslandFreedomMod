@@ -1,8 +1,8 @@
-name: AlexFreedomMod
+name: IslandFreedomMod
 main: me.StevenLawson.TotalFreedomMod.TotalFreedomMod
 version: 2.2
-description: Plugin for the AlexFreedom server.
+description: Plugin for the IslandFreedom server.
 softdepend: [BukkitTelnet, WorldEdit, Essentials, DisguiseCraft, BarAPI, CoreProtect]
-authors: [Madgeek1450, DarthSalamon, Camzie99, RobinGall2910, tylerhyperHD]
+authors: [reuben4545]
 
 # plugin.yml is no longer used to define commands.
