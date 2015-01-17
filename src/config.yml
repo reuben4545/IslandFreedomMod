@@ -17,13 +17,13 @@ server:
 
   # All players who show up as owner
   owners:
-    - CrafterSmith12
+    - LukaG4mer
     
   # URL players should appeal for bans at
-  ban_url: http://alexfreedommc.proboards.com/
+  ban_url: http://islandfreedom.boards.net/
 
   # URL players should appeal for permanent bans at
-  permban_url: http://alexfreedommc.proboards.com/
+  permban_url: http://islandfreedom.boards.net/
 
 # Blocking certain events
 allow:
@@ -210,10 +210,10 @@ announcer:
   interval: 30
 
   # Prefix for all announcements
-  prefix: '&5[&eAlexFreedom&5] &b'
+  prefix: '&5[&eIslandFreedom&5] &b'
 
   announcements:
-    - 'Be sure to visit our forums at &6http://alexfreedommc.proboards.com/'
+    - 'Be sure to visit our forums at &6http://islandfreedom.boards.net/'
     - 'You can always review the server rules by doing /rules'
     - 'If you aren''t OP, be sure to ask!'
 
