@@ -4,13 +4,13 @@
 # Generic server information
 server:
   # You should change this to your server's name
-  name: AlexFreedom
+  name: IslandFreedom
 
   # The address your server is located at
   address: alexfreedom.us.to
 
   # Shown at the server list
-  motd: AlexFreedom &8- Free OP &8| Spigot 1.7/1.
+  motd: IslandFreedom &8- Free OP &8| %mcversion%
 
   # Every word in the MOTD will be a different color unless prefixed by a color code
   colorful_motd: true
