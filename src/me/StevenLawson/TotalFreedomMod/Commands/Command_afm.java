@@ -9,17 +9,17 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = AdminLevel.ALL, source = SourceType.BOTH)
-@CommandParameters(description = "Shows information about AlexFreedom", usage = "/<command>")
+@CommandParameters(description = "Shows information about IslandFreedom", usage = "/<command>")
 public class Command_afm extends TFM_Command
 {
   public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
   {
     if (args.length == 0)
     {
-      playerMsg("AlexFredomMod for 'AlexFreedom', an associated all-op server.", ChatColor.GOLD);
+      playerMsg("IslandFredomMod for 'IslandFreedom', an all-op server.", ChatColor.GOLD);
       playerMsg(String.format("Version " + ChatColor.BLUE + "%s.%s" + ChatColor.BLUE + ", built %s.", new Object[] { TotalFreedomMod.pluginVersion, TotalFreedomMod.buildNumber, TotalFreedomMod.buildDate }), ChatColor.GOLD);
-      playerMsg("Created by _herobrian35_ (later worked on by _herobrian35_", ChatColor.GOLD);
-      playerMsg("Visit " + ChatColor.AQUA + "http://alexfreedommc.proboards.com/" + ChatColor.GREEN + " for more information.", ChatColor.GREEN);
+      playerMsg("Created by reuben4545 (later worked on by reuben4545", ChatColor.GOLD);
+      playerMsg("Visit " + ChatColor.AQUA + "http://islandfreedom.boards.net/" + ChatColor.GREEN + " for more information.", ChatColor.GREEN);
     }
     else if (args.length == 1)
     {
